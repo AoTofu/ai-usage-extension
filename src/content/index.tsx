@@ -99,7 +99,7 @@ const OVERLAY_HOSTS: Record<OverlayProviderId, OverlayHostConfig> = {
     brandAsset: codexBrandAsset,
     title: 'Codex',
     inputSelector:
-      '#prompt-textarea, [data-testid="composer-footer-actions"], [data-testid="chat-input"]',
+       '#prompt-textarea, [data-testid="composer-footer-actions"], [data-testid="chat-input"], [data-composer-markdown][contenteditable="true"][role="textbox"]',
   },
 };
 
