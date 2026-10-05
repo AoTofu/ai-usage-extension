@@ -18,7 +18,7 @@ badge.
 - **On-page overlay** on `claude.ai` — a collapsible capsule rendered in a Shadow DOM,
   so it never clashes with the host page's styles.
 - **Configurable refresh**: automatic updates every 5 minutes by default, with a
-  custom interval of at least 1 minute, or manual updates only via **Refresh**.
+  custom interval from 1 minute to 24 hours, or manual updates only via **Refresh**.
 - **Limit display**: show the used percentage (13%) or remaining percentage
   (87% left) across all providers, including the popup, overlays, and badge tooltip.
 - **Private by design**: usage is read from your own authenticated browser sessions.
@@ -47,9 +47,9 @@ Then:
 4. Sign in to the providers you want to track, then open the popup. It refreshes automatically
    by default; in manual mode, press **Refresh**.
 
-Open **Settings** to select **Usage refresh** and set a custom interval in minutes
-(fractional values are supported). The interval is saved when you leave the field
-or press Enter. **Only on Refresh** removes the background alarm and suppresses
+Open **Settings** to select **Usage refresh** and set a custom interval from 1 to
+1440 minutes (fractional values are supported). The interval is saved when you leave
+the field or press Enter. **Only on Refresh** removes the background alarm and suppresses
 automatic usage requests on worker startup, popup/overlay opening, and credential
 changes. Cached data remains visible until you press Refresh. A request already
 in progress when you switch modes is allowed to finish.

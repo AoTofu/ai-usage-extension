@@ -27,6 +27,7 @@ export const REFRESH_ALARM = 'refreshUsage';
 
 /** How often the background worker re-fetches usage, in minutes. */
 export const REFRESH_INTERVAL_MINUTES = 5;
+export const MAX_REFRESH_INTERVAL_MINUTES = 1440;
 
 /** Percentage thresholds that drive the ok / warning / critical tone. */
 export const USAGE_THRESHOLDS = {

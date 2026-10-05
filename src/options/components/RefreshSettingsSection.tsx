@@ -1,3 +1,4 @@
+import { MAX_REFRESH_INTERVAL_MINUTES } from '../../shared/constants';
 import { msg } from '../../shared/i18n';
 import type { ExtensionSettings, RefreshMode } from '../../shared/types';
 import { SettingsSection } from './SettingsSection';
@@ -31,14 +32,16 @@ export const RefreshSettingsSection = ({
           key={refresh.intervalMinutes}
           type="number"
           min="1"
+          max={MAX_REFRESH_INTERVAL_MINUTES}
           step="any"
           required
           defaultValue={refresh.intervalMinutes}
           disabled={refresh.mode === 'manual'}
           onBlur={(event) => {
             const input = event.currentTarget;
-            if (input.reportValidity()) onIntervalChange(input.valueAsNumber);
-            else input.value = String(refresh.intervalMinutes);
+            if (!input.reportValidity()) input.value = String(refresh.intervalMinutes);
+            else if (input.valueAsNumber !== refresh.intervalMinutes)
+              onIntervalChange(input.valueAsNumber);
           }}
           onKeyDown={(event) => {
             if (event.key === 'Enter') event.currentTarget.blur();

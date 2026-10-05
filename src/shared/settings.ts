@@ -1,4 +1,4 @@
-import { REFRESH_INTERVAL_MINUTES, STORAGE_KEYS } from './constants';
+import { MAX_REFRESH_INTERVAL_MINUTES, REFRESH_INTERVAL_MINUTES, STORAGE_KEYS } from './constants';
 import { normalizeLanguage } from './locales';
 import type {
   ExtensionSettings,
@@ -140,7 +140,7 @@ export const normalizeSettings = (
         typeof candidate.refresh?.intervalMinutes === 'number' &&
         Number.isFinite(candidate.refresh.intervalMinutes) &&
         candidate.refresh.intervalMinutes >= 1
-          ? candidate.refresh.intervalMinutes
+          ? Math.min(candidate.refresh.intervalMinutes, MAX_REFRESH_INTERVAL_MINUTES)
           : REFRESH_INTERVAL_MINUTES,
     },
     percentageDisplay: candidate.percentageDisplay === 'remaining' ? 'remaining' : 'used',

@@ -10,6 +10,10 @@ it('preserves automatic defaults and normalizes stored refresh preferences', () 
   const custom = normalizeSettings({ refresh: { mode: 'manual', intervalMinutes: 12.5 } });
   assert.equal(custom.refresh.mode, 'manual');
   assert.equal(custom.refresh.intervalMinutes, 12.5);
+  assert.equal(
+    normalizeSettings({ refresh: { intervalMinutes: 5000 } }).refresh.intervalMinutes,
+    1440,
+  );
   for (const intervalMinutes of [0, '10', Infinity]) {
     assert.equal(normalizeSettings({ refresh: { intervalMinutes } }).refresh.intervalMinutes, 5);
   }
