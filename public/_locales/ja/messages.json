@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "間隔（分、最小 1）"
   },
-  "percentageUsed": {
-    "message": "$1% 使用済み"
-  },
   "percentageRemaining": {
     "message": "残り $1%"
   },

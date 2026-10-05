@@ -12,9 +12,7 @@ export const clampPercent = (value: number): number =>
 /** Display preference never changes the stored usage or progress-bar value. */
 export const formatUsagePercent = (value: number, display: PercentageDisplay): string => {
   const used = clampPercent(value);
-  return display === 'remaining'
-    ? msg('percentageRemaining', String(100 - used))
-    : msg('percentageUsed', String(used));
+  return display === 'remaining' ? msg('percentageRemaining', String(100 - used)) : `${used}%`;
 };
 
 export const isLimitAvailable = (limit: UsageLimit | undefined): boolean =>

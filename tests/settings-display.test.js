@@ -16,16 +16,17 @@ describe('percentage display preferences', () => {
     assert.equal(custom.percentageDisplay, 'remaining');
   });
 
-  it('formats the complement of rounded, bounded usage', () => {
+  it('formats used as a plain percentage and remaining as the bounded complement', () => {
     const { formatUsagePercent } = loadTypeScript('src/shared/utils/index.ts');
-    assert.equal(formatUsagePercent(13, 'used'), '13% used');
+    assert.equal(formatUsagePercent(13, 'used'), '13%');
+    assert.equal(formatUsagePercent(105, 'used'), '100%');
     assert.equal(formatUsagePercent(13, 'remaining'), '87% left');
     assert.equal(formatUsagePercent(12.6, 'remaining'), '87% left');
     assert.equal(formatUsagePercent(105, 'remaining'), '0% left');
     assert.equal(formatUsagePercent(-5, 'remaining'), '100% left');
   });
 
-  it('matches session, weekly and model fills to the display mode while preserving warning tones', () => {
+  it('changes only the label, keeping bar fill and warning tones on usage', () => {
     const { ProviderCard } = loadTypeScript('src/sidepanel/components/ProviderCard.tsx');
     const limit = (percentage) => ({ percentage, resetsAt: null });
     const usage = {
@@ -47,13 +48,13 @@ describe('percentage display preferences', () => {
       );
     const used = render('used');
     const remaining = render('remaining');
-    for (const text of ['13% used', '93% used', '75% used']) assert.ok(used.includes(text));
+    for (const text of ['>13%<', '>93%<', '>75%<']) assert.ok(used.includes(text));
     for (const text of ['87% left', '7% left', '25% left']) assert.ok(remaining.includes(text));
-    for (const value of [13, 93, 75]) {
-      assert.ok(used.includes(`aria-valuenow="${value}"`));
-      assert.ok(used.includes(`width:${value}%`));
-      assert.ok(remaining.includes(`aria-valuenow="${100 - value}"`));
-      assert.ok(remaining.includes(`width:${100 - value}%`));
+    for (const html of [used, remaining]) {
+      for (const value of [13, 93, 75]) {
+        assert.ok(html.includes(`aria-valuenow="${value}"`));
+        assert.ok(html.includes(`width:${value}%`));
+      }
     }
     assert.ok(remaining.includes('aria-valuetext="87% left"'));
     for (const html of [used, remaining]) {

@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "ಮಧ್ಯಂತರ (ನಿಮಿಷ, ಕನಿಷ್ಠ 1)"
   },
-  "percentageUsed": {
-    "message": "$1% ಬಳಸಲಾಗಿದೆ"
-  },
   "percentageRemaining": {
     "message": "$1% ಉಳಿದಿದೆ"
   },

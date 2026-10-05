@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "ክፍተት (ደቂቃ፣ ቢያንስ 1)"
   },
-  "percentageUsed": {
-    "message": "$1% ጥቅም ላይ ውሏል"
-  },
   "percentageRemaining": {
     "message": "$1% ቀርቷል"
   },

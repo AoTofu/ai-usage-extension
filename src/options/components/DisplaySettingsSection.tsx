@@ -1,6 +1,7 @@
 import { Check } from 'lucide-react';
 import { msg } from '../../shared/i18n';
 import type { PercentageDisplay, PopupLayout } from '../../shared/types';
+import { formatUsagePercent } from '../../shared/utils';
 import { SettingsSection } from './SettingsSection';
 
 interface DisplaySettingsSectionProps {
@@ -66,10 +67,10 @@ export const DisplaySettingsSection = ({
         onChange={(event) => onPercentageDisplayChange(event.target.value as PercentageDisplay)}
       >
         <option value="used">
-          {msg('optionsPercentageUsed')} — {msg('percentageUsed', '13')}
+          {msg('optionsPercentageUsed')} — {formatUsagePercent(13, 'used')}
         </option>
         <option value="remaining">
-          {msg('optionsPercentageRemaining')} — {msg('percentageRemaining', '87')}
+          {msg('optionsPercentageRemaining')} — {formatUsagePercent(13, 'remaining')}
         </option>
       </select>
     </label>

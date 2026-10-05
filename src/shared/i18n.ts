@@ -9,7 +9,6 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   optionsRefreshAuto: 'Automatic',
   optionsRefreshManual: 'Only on Refresh',
   optionsRefreshInterval: 'Interval (minutes, minimum 1)',
-  percentageUsed: '$1% used',
   percentageRemaining: '$1% left',
   optionsPercentageTitle: 'Limit display',
   optionsPercentageUsed: 'Used',

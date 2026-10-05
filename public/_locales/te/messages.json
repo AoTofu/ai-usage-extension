@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "వ్యవధి (నిమిషాలు, కనీసం 1)"
   },
-  "percentageUsed": {
-    "message": "$1% ఉపయోగించారు"
-  },
   "percentageRemaining": {
     "message": "$1% మిగిలింది"
   },

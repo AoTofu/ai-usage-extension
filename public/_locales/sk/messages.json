@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "Interval (minúty, najmenej 1)"
   },
-  "percentageUsed": {
-    "message": "$1% využité"
-  },
   "percentageRemaining": {
     "message": "$1% zostáva"
   },

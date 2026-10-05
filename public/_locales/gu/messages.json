@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "અંતરાલ (મિનિટ, ઓછામાં ઓછું 1)"
   },
-  "percentageUsed": {
-    "message": "$1% વપરાયેલ"
-  },
   "percentageRemaining": {
     "message": "$1% બાકી"
   },

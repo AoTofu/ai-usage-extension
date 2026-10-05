@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "Intervalas (minutės, bent 1)"
   },
-  "percentageUsed": {
-    "message": "$1% panaudota"
-  },
   "percentageRemaining": {
     "message": "$1% liko"
   },

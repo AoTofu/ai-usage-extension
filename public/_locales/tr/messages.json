@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "Aralık (dakika, en az 1)"
   },
-  "percentageUsed": {
-    "message": "$1% kullanıldı"
-  },
   "percentageRemaining": {
     "message": "$1% kaldı"
   },

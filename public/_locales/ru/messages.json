@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "Интервал (минуты, минимум 1)"
   },
-  "percentageUsed": {
-    "message": "Использовано $1%"
-  },
   "percentageRemaining": {
     "message": "Осталось $1%"
   },

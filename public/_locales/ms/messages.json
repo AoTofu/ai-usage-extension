@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "Selang (minit, minimum 1)"
   },
-  "percentageUsed": {
-    "message": "$1% digunakan"
-  },
   "percentageRemaining": {
     "message": "$1% berbaki"
   },

@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "Pagitan (minuto, hindi bababa sa 1)"
   },
-  "percentageUsed": {
-    "message": "$1% nagamit"
-  },
   "percentageRemaining": {
     "message": "$1% natitira"
   },

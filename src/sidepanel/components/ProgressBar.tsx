@@ -14,7 +14,6 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
   percentageDisplay = 'used',
 }) => {
   const value = clampPercent(percentage);
-  const displayedValue = percentageDisplay === 'remaining' ? 100 - value : value;
   const tone = getUsageTone(value);
 
   return (
@@ -27,12 +26,12 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
         className={`au-meter au-meter--${tone}`}
         role="progressbar"
         aria-label={label}
-        aria-valuenow={displayedValue}
+        aria-valuenow={value}
         aria-valuetext={formatUsagePercent(value, percentageDisplay)}
         aria-valuemin={0}
         aria-valuemax={100}
       >
-        <div className="au-meter__fill" style={{ width: `${displayedValue}%` }} />
+        <div className="au-meter__fill" style={{ width: `${value}%` }} />
       </div>
     </div>
   );

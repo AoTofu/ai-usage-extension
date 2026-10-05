@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "Muda (dakika, angalau 1)"
   },
-  "percentageUsed": {
-    "message": "$1% imetumika"
-  },
   "percentageRemaining": {
     "message": "$1% imebaki"
   },

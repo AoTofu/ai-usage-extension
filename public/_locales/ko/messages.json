@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "간격(분, 최소 1)"
   },
-  "percentageUsed": {
-    "message": "$1% 사용"
-  },
   "percentageRemaining": {
     "message": "$1% 남음"
   },

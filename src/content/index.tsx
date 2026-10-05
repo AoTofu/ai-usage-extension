@@ -61,7 +61,6 @@ interface OverlayMetricProps {
 
 const OverlayMetric: React.FC<OverlayMetricProps> = ({ label, limit, now, percentageDisplay }) => {
   const percent = useMemo(() => clampPercent(limit.percentage), [limit.percentage]);
-  const displayedPercent = percentageDisplay === 'remaining' ? 100 - percent : percent;
   const count =
     limit.countLabel ??
     (typeof limit.used === 'number' && typeof limit.limit === 'number' && limit.limit > 0
@@ -78,12 +77,12 @@ const OverlayMetric: React.FC<OverlayMetricProps> = ({ label, limit, now, percen
         className={`aiu-meter aiu-meter--${getUsageTone(percent)}`}
         role="progressbar"
         aria-label={label}
-        aria-valuenow={displayedPercent}
+        aria-valuenow={percent}
         aria-valuetext={formatUsagePercent(percent, percentageDisplay)}
         aria-valuemin={0}
         aria-valuemax={100}
       >
-        <div className="aiu-meter__fill" style={{ width: `${displayedPercent}%` }} />
+        <div className="aiu-meter__fill" style={{ width: `${percent}%` }} />
       </div>
       <div className="aiu-meta">
         {count !== null && (

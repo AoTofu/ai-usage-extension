@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "Intervāls (minūtes, vismaz 1)"
   },
-  "percentageUsed": {
-    "message": "$1% izmantots"
-  },
   "percentageRemaining": {
     "message": "$1% atlicis"
   },

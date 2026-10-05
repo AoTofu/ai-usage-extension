@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "Interval (menit, minimal 1)"
   },
-  "percentageUsed": {
-    "message": "$1% terpakai"
-  },
   "percentageRemaining": {
     "message": "$1% tersisa"
   },

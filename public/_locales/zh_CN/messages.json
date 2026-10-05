@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "间隔（分钟，最少 1）"
   },
-  "percentageUsed": {
-    "message": "已用 $1%"
-  },
   "percentageRemaining": {
     "message": "剩余 $1%"
   },

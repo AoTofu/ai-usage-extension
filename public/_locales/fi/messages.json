@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "Aikaväli (minuuttia, vähintään 1)"
   },
-  "percentageUsed": {
-    "message": "$1% käytetty"
-  },
   "percentageRemaining": {
     "message": "$1% jäljellä"
   },

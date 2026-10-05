@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "الفاصل (بالدقائق، الحد الأدنى 1)"
   },
-  "percentageUsed": {
-    "message": "تم استخدام $1%"
-  },
   "percentageRemaining": {
     "message": "متبقٍ $1%"
   },

@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "ช่วงเวลา (นาที ขั้นต่ำ 1)"
   },
-  "percentageUsed": {
-    "message": "ใช้แล้ว $1%"
-  },
   "percentageRemaining": {
     "message": "เหลือ $1%"
   },

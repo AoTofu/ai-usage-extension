@@ -368,9 +368,6 @@
   "optionsRefreshInterval": {
     "message": "ব্যবধান (মিনিট, সর্বনিম্ন 1)"
   },
-  "percentageUsed": {
-    "message": "$1% ব্যবহৃত"
-  },
   "percentageRemaining": {
     "message": "$1% বাকি"
   },
