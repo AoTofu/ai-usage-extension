@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Zobrazte, kolik z každého limitu je využito nebo zbývá."
+  },
+  "manualRefreshHint": {
+    "message": "Automatické obnovení je vypnuté. Využití načtete tlačítkem Obnovit."
   }
 }

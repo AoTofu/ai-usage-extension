@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Tunjukkan berapa banyak setiap had yang telah digunakan atau berbaki."
+  },
+  "manualRefreshHint": {
+    "message": "Kemas kini automatik dimatikan. Tekan Muat semula untuk memuatkan penggunaan."
   }
 }

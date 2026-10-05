@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Her limitin ne kadarının kullanıldığını veya kaldığını gösterin."
+  },
+  "manualRefreshHint": {
+    "message": "Otomatik yenileme kapalı. Kullanımı yüklemek için Yenile'ye basın."
   }
 }

@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Vis, hvor meget af hver grænse der er brugt eller tilbage."
+  },
+  "manualRefreshHint": {
+    "message": "Automatisk opdatering er slået fra. Tryk på Opdater for at hente forbruget."
   }
 }

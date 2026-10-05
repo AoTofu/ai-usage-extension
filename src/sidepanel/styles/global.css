@@ -157,6 +157,18 @@ input {
   line-height: 1.45;
 }
 
+.au-notice {
+  margin: 0;
+  border: 1px solid var(--au-line);
+  border-left: 2px solid var(--au-fill);
+  background: var(--au-surface);
+  color: var(--au-text-muted);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
 /* ---- In-card overlay toggle ---------------------------------------- */
 
 .au-global-controls {

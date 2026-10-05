@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Näytä, kuinka paljon kustakin rajasta on käytetty tai jäljellä."
+  },
+  "manualRefreshHint": {
+    "message": "Automaattinen päivitys on pois päältä. Lataa käyttö Päivitä-painikkeella."
   }
 }

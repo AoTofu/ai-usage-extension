@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "แสดงว่าแต่ละขีดจำกัดใช้ไปหรือคงเหลือเท่าใด"
+  },
+  "manualRefreshHint": {
+    "message": "ปิดการอัปเดตอัตโนมัติอยู่ กดรีเฟรชเพื่อโหลดการใช้งาน"
   }
 }

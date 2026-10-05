@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "显示每项限额的已用量或剩余量。"
+  },
+  "manualRefreshHint": {
+    "message": "自动刷新已关闭。点击刷新以加载用量。"
   }
 }

@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Pokazuj, ile z każdego limitu zużyto lub pozostało."
+  },
+  "manualRefreshHint": {
+    "message": "Automatyczne odświeżanie jest wyłączone. Naciśnij Odśwież, aby wczytać wykorzystanie."
   }
 }

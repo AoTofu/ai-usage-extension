@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "顯示每項額度的已用量或剩餘量。"
+  },
+  "manualRefreshHint": {
+    "message": "自動更新已關閉。點擊更新以載入用量。"
   }
 }

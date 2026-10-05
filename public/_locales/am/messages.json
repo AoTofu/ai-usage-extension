@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "ከእያንዳንዱ ገደብ ምን ያህል እንደተጠቀሙ ወይም እንደቀረ ያሳዩ።"
+  },
+  "manualRefreshHint": {
+    "message": "ራስ-ሰር ማደስ ጠፍቷል። አጠቃቀሙን ለመጫን አድስን ይጫኑ።"
   }
 }

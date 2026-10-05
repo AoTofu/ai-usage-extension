@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Mostra quant s'ha fet servir o quant queda de cada límit."
+  },
+  "manualRefreshHint": {
+    "message": "Les actualitzacions automàtiques estan desactivades. Prem Actualitza per carregar l'ús."
   }
 }

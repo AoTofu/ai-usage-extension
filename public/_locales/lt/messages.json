@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Rodykite, kiek kiekvieno limito išnaudota arba liko."
+  },
+  "manualRefreshHint": {
+    "message": "Automatinis atnaujinimas išjungtas. Paspauskite Atnaujinti, kad įkeltumėte naudojimą."
   }
 }

@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Tampilkan berapa banyak dari setiap batas yang terpakai atau tersisa."
+  },
+  "manualRefreshHint": {
+    "message": "Pembaruan otomatis nonaktif. Tekan Segarkan untuk memuat penggunaan."
   }
 }

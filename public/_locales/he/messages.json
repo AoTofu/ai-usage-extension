@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "הציגו כמה מכל מגבלה נוצל או נותר."
+  },
+  "manualRefreshHint": {
+    "message": "הרענון האוטומטי כבוי. לחצו על רענון כדי לטעון את השימוש."
   }
 }

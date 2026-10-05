@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Rādiet, cik no katra limita ir izmantots vai atlicis."
+  },
+  "manualRefreshHint": {
+    "message": "Automātiskā atjaunināšana ir izslēgta. Nospiediet Atjaunināt, lai ielādētu lietojumu."
   }
 }

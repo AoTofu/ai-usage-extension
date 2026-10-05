@@ -15,6 +15,7 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   optionsPercentageUsed: 'Used',
   optionsPercentageRemaining: 'Remaining',
   refreshUsage: 'Refresh usage',
+  manualRefreshHint: 'Automatic updates are off. Press Refresh to load usage.',
   refreshUsageLimits: 'Refresh usage limits',
   refreshErrorPrefix: 'Couldn’t refresh',
   refreshFailed: 'Refresh failed',

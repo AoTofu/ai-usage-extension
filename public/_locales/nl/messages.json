@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Toon hoeveel van elke limiet is gebruikt of resterend is."
+  },
+  "manualRefreshHint": {
+    "message": "Automatisch vernieuwen staat uit. Klik op Vernieuwen om het gebruik te laden."
   }
 }

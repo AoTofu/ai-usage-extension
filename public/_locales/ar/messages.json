@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "اعرض مقدار ما استُخدم أو تبقّى من كل حد."
+  },
+  "manualRefreshHint": {
+    "message": "التحديث التلقائي متوقف. اضغط على تحديث لتحميل الاستخدام."
   }
 }

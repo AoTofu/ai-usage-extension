@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Zeigen, wie viel von jedem Limit genutzt oder übrig ist."
+  },
+  "manualRefreshHint": {
+    "message": "Automatische Aktualisierung ist aus. Auf Aktualisieren klicken, um die Nutzung zu laden."
   }
 }

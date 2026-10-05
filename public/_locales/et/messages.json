@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Näidake, kui palju igast limiidist on kasutatud või alles."
+  },
+  "manualRefreshHint": {
+    "message": "Automaatne värskendamine on välja lülitatud. Kasutuse laadimiseks vajutage Värskenda."
   }
 }

@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Mutassa, hogy az egyes korlátokból mennyi fogyott el vagy maradt."
+  },
+  "manualRefreshHint": {
+    "message": "Az automatikus frissítés ki van kapcsolva. A használat betöltéséhez nyomja meg a Frissítés gombot."
   }
 }

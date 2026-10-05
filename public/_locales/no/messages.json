@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Vis hvor mye av hver grense som er brukt eller gjenstår."
+  },
+  "manualRefreshHint": {
+    "message": "Automatisk oppdatering er av. Trykk på Oppdater for å laste inn bruken."
   }
 }

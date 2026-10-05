@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Mostre quanto de cada limite foi utilizado ou ainda resta."
+  },
+  "manualRefreshHint": {
+    "message": "As atualizações automáticas estão desativadas. Clique em Atualizar para carregar a utilização."
   }
 }

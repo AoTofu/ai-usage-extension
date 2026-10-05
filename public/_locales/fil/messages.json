@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Ipakita kung gaano karami sa bawat limitasyon ang nagamit o natitira."
+  },
+  "manualRefreshHint": {
+    "message": "Naka-off ang awtomatikong pag-update. Pindutin ang Refresh para i-load ang paggamit."
   }
 }

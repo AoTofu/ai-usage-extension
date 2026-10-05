@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Affichez la part utilisée ou restante de chaque limite."
+  },
+  "manualRefreshHint": {
+    "message": "L'actualisation automatique est désactivée. Cliquez sur Actualiser pour charger l'utilisation."
   }
 }

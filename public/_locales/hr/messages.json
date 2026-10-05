@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Prikažite koliko je svakog ograničenja iskorišteno ili preostalo."
+  },
+  "manualRefreshHint": {
+    "message": "Automatsko osvježavanje je isključeno. Pritisnite Osvježi za učitavanje potrošnje."
   }
 }

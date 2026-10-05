@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Onyesha kiasi kilichotumika au kilichobaki cha kila kikomo."
+  },
+  "manualRefreshHint": {
+    "message": "Masasisho ya moja kwa moja yamezimwa. Bonyeza Onyesha upya ili kupakia matumizi."
   }
 }

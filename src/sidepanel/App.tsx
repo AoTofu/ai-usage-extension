@@ -110,6 +110,12 @@ export const App = () => {
   const { usage, settings, loading, refreshing, error, refresh } = useUsageData();
   const now = useNow(30_000);
   const [reportOpen, setReportOpen] = useState(false);
+  const [refreshedHere, setRefreshedHere] = useState(false);
+  const showManualHint =
+    settings?.refresh.mode === 'manual' &&
+    !refreshing &&
+    !refreshedHere &&
+    !PROVIDERS.some((provider) => usage[provider.id]);
 
   const sendReport = useCallback(
     (message: string) =>
@@ -135,7 +141,10 @@ export const App = () => {
           </button>
           <button
             type="button"
-            onClick={() => void refresh()}
+            onClick={() => {
+              setRefreshedHere(true);
+              void refresh();
+            }}
             disabled={refreshing}
             className={`au-btn-refresh ${refreshing ? 'au-btn-refresh--spin' : ''}`}
             title={msg('refreshUsage')}
@@ -151,6 +160,7 @@ export const App = () => {
           {msg('refreshErrorPrefix')} - {error}
         </p>
       )}
+      {showManualHint && <p className="au-notice">{msg('manualRefreshHint')}</p>}
       <div className={`au-cards ${settings?.popupLayout === 'grid' ? 'au-cards--grid' : ''}`}>
         {PROVIDERS.filter((provider) => settings?.providers[provider.id].visible !== false).map(
           (provider) => (

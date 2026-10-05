@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Hiển thị mức đã dùng hoặc còn lại của mỗi giới hạn."
+  },
+  "manualRefreshHint": {
+    "message": "Cập nhật tự động đang tắt. Nhấn Làm mới để tải mức sử dụng."
   }
 }

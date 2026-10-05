@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Show how much of each limit is used or left."
+  },
+  "manualRefreshHint": {
+    "message": "Automatic updates are off. Press Refresh to load usage."
   }
 }

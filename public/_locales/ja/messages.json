@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "各上限の使用量または残量を表示します。"
+  },
+  "manualRefreshHint": {
+    "message": "自動更新はオフです。更新ボタンを押すと使用状況を読み込みます。"
   }
 }

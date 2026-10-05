@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Afișați cât s-a folosit sau cât a rămas din fiecare limită."
+  },
+  "manualRefreshHint": {
+    "message": "Actualizările automate sunt dezactivate. Apăsați Actualizează pentru a încărca utilizarea."
   }
 }

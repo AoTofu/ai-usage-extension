@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "각 한도의 사용량 또는 남은 양을 표시합니다."
+  },
+  "manualRefreshHint": {
+    "message": "자동 새로고침이 꺼져 있습니다. 사용량을 불러오려면 새로고침을 누르세요."
   }
 }

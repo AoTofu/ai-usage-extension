@@ -382,5 +382,8 @@
   },
   "optionsPercentageDescription": {
     "message": "Visa hur mycket av varje gräns som har använts eller återstår."
+  },
+  "manualRefreshHint": {
+    "message": "Automatisk uppdatering är av. Tryck på Uppdatera för att läsa in användningen."
   }
 }
