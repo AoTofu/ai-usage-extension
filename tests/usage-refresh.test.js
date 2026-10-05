@@ -309,7 +309,7 @@ describe('worker startup and refresh scheduling', () => {
     await flush();
   });
 
-  it('removes the alarm and skips every automatic trigger in manual mode, but permits Refresh', async () => {
+  it('removes the alarm and skips automatic triggers in manual mode, but permits Refresh', async () => {
     const { chrome, calls, pending } = workerHarness(
       { name: 'refreshUsage', periodInMinutes: 5 },
       { mode: 'manual', intervalMinutes: 5 },
@@ -321,12 +321,6 @@ describe('worker startup and refresh scheduling', () => {
     chrome.runtime.onStartup.emit();
     chrome.runtime.onInstalled.emit({ reason: 'update' });
     chrome.alarms.onAlarm.emit({ name: 'refreshUsage' });
-    chrome.storage.onChanged.emit({ glm_api_key: { newValue: 'synthetic-key' } }, 'local');
-    chrome.runtime.onMessage.emit(
-      { type: 'SET_GLM_TOKEN', token: 'synthetic-token' },
-      {},
-      () => {},
-    );
     const automatic = deferred();
     chrome.runtime.onMessage.emit(
       { type: 'REFRESH_USAGE', automatic: true },
@@ -341,6 +335,26 @@ describe('worker startup and refresh scheduling', () => {
     assert.equal(calls.refresh, 1);
     pending.resolve({ mimo: sample(13) });
     assert.equal((await manual.promise).data.mimo.session.percentage, 13);
+  });
+
+  it('refreshes after credential changes in manual mode', async () => {
+    const { chrome, calls, pending } = workerHarness(undefined, {
+      mode: 'manual',
+      intervalMinutes: 5,
+    });
+    await flush();
+    chrome.storage.onChanged.emit({ glm_api_key: { newValue: 'synthetic-key' } }, 'local');
+    await flush();
+    assert.equal(calls.refresh, 1);
+    pending.resolve({});
+    await flush();
+    chrome.runtime.onMessage.emit(
+      { type: 'SET_GLM_TOKEN', token: 'synthetic-token' },
+      {},
+      () => {},
+    );
+    await flush();
+    assert.equal(calls.refresh, 2);
   });
 
   it('reschedules custom intervals and applies manual/automatic changes immediately', async () => {

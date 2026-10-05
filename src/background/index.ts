@@ -42,7 +42,7 @@ const refreshUsage = (): Promise<UsageState> => {
 
 const refreshAfterInFlight = async (): Promise<void> => {
   await refreshInFlight?.catch(() => undefined);
-  await refreshAutomatically();
+  await refreshUsage();
 };
 
 const refreshAutomatically = async (): Promise<UsageState> => {

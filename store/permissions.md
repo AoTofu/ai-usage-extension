@@ -21,7 +21,7 @@ or written to any other storage backend.
 A single recurring `chrome.alarms` entry wakes the service worker to re-fetch
 usage limits in automatic mode. It defaults to five minutes and follows the
 user's configured interval. Manual mode removes this alarm and fetches usage
-only when the user presses Refresh.
+only when the user presses Refresh or saves a new provider credential.
 
 ## cookies
 
