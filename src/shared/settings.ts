@@ -63,7 +63,7 @@ export const PROVIDER_SUPPORTED_METRICS: Record<ProviderId, ProviderMetric[]> = 
 
 const PROVIDER_DEFAULTS: Record<ProviderId, ProviderDisplaySettings> = {
   claude: { visible: true, metrics: ['session', 'weekly', 'reset'] },
-  codex: { visible: true, metrics: ['weekly', 'reset', 'availableResets'] },
+  codex: { visible: true, metrics: ['session', 'weekly', 'reset', 'availableResets'] },
   minimax: { visible: false, metrics: ['session', 'weekly', 'models', 'reset'] },
   kimi: { visible: false, metrics: ['session', 'weekly', 'reset'] },
   cursor: { visible: false, metrics: ['session', 'reset', 'summary'] },
