@@ -8,6 +8,7 @@ import qwenBrandAsset from '../assets/brands/qwen.webp';
 import zaiBrandAsset from '../assets/brands/zai.webp';
 import { msg } from '../shared/i18n';
 import type { ProviderId, ProviderMetric } from '../shared/types';
+import { badgeIconPath } from '../shared/utils';
 
 export const PROVIDER_DETAILS: Record<ProviderId, { name: string; icon: string }> = {
   claude: { name: 'Claude', icon: claudeBrandAsset },
@@ -29,7 +30,8 @@ export const APP_ICON = extensionAsset('icons/icon-128.png');
 /** The exact toolbar icons the background script swaps between, in 10% steps. */
 export const BADGE_RANGE_ICONS = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100].map((range) => ({
   range,
-  src: extensionAsset(`icons/badges/range-${range}.png`),
+  used: extensionAsset(badgeIconPath(range)),
+  remaining: extensionAsset(badgeIconPath(range, 'remaining')),
 }));
 
 const PROVIDER_METRIC_LABELS: Record<ProviderMetric, string> = {

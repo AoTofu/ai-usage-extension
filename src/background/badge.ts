@@ -1,18 +1,22 @@
 import { msg } from '../shared/i18n';
 import { readExtensionSettings } from '../shared/settings';
-import type { BadgeMetric, ExtensionSettings, ProviderId, UsageState } from '../shared/types';
-import { clampPercent, formatUsagePercent, isLimitAvailable } from '../shared/utils';
-
-const iconPath = (range: number): string => `icons/badges/range-${range}.png`;
+import type {
+  BadgeMetric,
+  ExtensionSettings,
+  PercentageDisplay,
+  ProviderId,
+  UsageState,
+} from '../shared/types';
+import { badgeIconPath, clampPercent, formatUsagePercent, isLimitAvailable } from '../shared/utils';
 
 const ICON_SIZES = [16, 32, 48, 128] as const;
 type IconSize = (typeof ICON_SIZES)[number];
 type ActionIconData = Record<IconSize, ImageData>;
 
-const loadIconData = async (range: number, size: IconSize): Promise<[IconSize, ImageData]> => {
-  const response = await fetch(chrome.runtime.getURL(iconPath(range)));
+const loadIconData = async (path: string, size: IconSize): Promise<[IconSize, ImageData]> => {
+  const response = await fetch(chrome.runtime.getURL(path));
   if (!response.ok) {
-    throw new Error(`Unable to load badge icon for ${range}%`);
+    throw new Error(`Unable to load badge icon ${path}`);
   }
 
   const canvas = new OffscreenCanvas(size, size);
@@ -30,13 +34,13 @@ const loadIconData = async (range: number, size: IconSize): Promise<[IconSize, I
   }
 };
 
-const actionIconData = async (range: number): Promise<ActionIconData> =>
+const actionIconData = async (path: string): Promise<ActionIconData> =>
   Object.fromEntries(
-    await Promise.all(ICON_SIZES.map((size) => loadIconData(range, size))),
+    await Promise.all(ICON_SIZES.map((size) => loadIconData(path, size))),
   ) as ActionIconData;
 
-const setActionIcon = async (range: number): Promise<void> => {
-  await chrome.action.setIcon({ imageData: await actionIconData(range) });
+const setActionIcon = async (range: number, display?: PercentageDisplay): Promise<void> => {
+  await chrome.action.setIcon({ imageData: await actionIconData(badgeIconPath(range, display)) });
 };
 
 const iconRange = (percent: number): number => {
@@ -113,14 +117,15 @@ const resetBadge = async (): Promise<void> => {
 };
 
 export const updateBadge = async (state: UsageState): Promise<void> => {
-  const summary = summarizeUsage(state, await readExtensionSettings());
+  const settings = await readExtensionSettings();
+  const summary = summarizeUsage(state, settings);
   if (!summary) {
     await resetBadge();
     return;
   }
 
   await Promise.all([
-    setActionIcon(iconRange(summary.percent)),
+    setActionIcon(iconRange(summary.percent), settings.percentageDisplay),
     chrome.action.setBadgeText({ text: '' }),
     chrome.action.setTitle({ title: summary.tooltip }),
   ]);

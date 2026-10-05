@@ -118,6 +118,7 @@ export const OptionsApp = () => {
           />
           <BadgeSettingsSection
             badge={settings.badge}
+            percentageDisplay={settings.percentageDisplay}
             providers={settings.providers}
             onBadgeModeChange={(mode) => updateSettings((current) => withBadgeMode(current, mode))}
             onBadgeMetricChange={(metric) =>

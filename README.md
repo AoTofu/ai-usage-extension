@@ -56,8 +56,9 @@ press Refresh. Switching back to automatic mode refreshes immediately. A request
 already in progress when you switch modes is allowed to finish.
 
 In **Settings**, **Limit display** switches between **Used** and **Remaining**.
-Only the percentage labels change: progress-bar fill, warning colors, badge icon
-ranges, raw counts, and stored usage calculations still use the consumed amount.
+Percentage labels change, and in Remaining mode the toolbar icon ring shows what is
+left while keeping the color of the consumed range. Progress-bar fill, warning colors,
+raw counts, and stored usage calculations still use the consumed amount.
 
 ## Architecture
 

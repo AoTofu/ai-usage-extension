@@ -1,13 +1,20 @@
 import { AlertTriangle, Layers, Target } from 'lucide-react';
 import { msg } from '../../shared/i18n';
 import { PROVIDER_IDS } from '../../shared/settings';
-import type { BadgeMetric, BadgeMode, ExtensionSettings, ProviderId } from '../../shared/types';
+import type {
+  BadgeMetric,
+  BadgeMode,
+  ExtensionSettings,
+  PercentageDisplay,
+  ProviderId,
+} from '../../shared/types';
 import { BADGE_RANGE_ICONS, PROVIDER_DETAILS } from '../config';
 import { SettingsSection } from './SettingsSection';
 
 interface BadgeSettingsSectionProps {
   badge: ExtensionSettings['badge'];
   providers: ExtensionSettings['providers'];
+  percentageDisplay: PercentageDisplay;
   onBadgeModeChange: (mode: BadgeMode) => void;
   onBadgeMetricChange: (metric: BadgeMetric) => void;
   onBadgeProviderChange: (provider: ProviderId) => void;
@@ -34,17 +41,22 @@ const MODE_OPTIONS: Array<{
 ];
 
 /** Shows the actual toolbar icons the background script swaps between. */
-const RangeScale = () => (
+const RangeScale = ({ percentageDisplay }: { percentageDisplay: PercentageDisplay }) => (
   <div className="auo-scale">
     <div className="auo-scale__head">
       <span>{msg('optionsBadgeSteps')}</span>
       <em>{msg('optionsBadgeStepsHint')}</em>
     </div>
     <div className="auo-scale__steps">
-      {BADGE_RANGE_ICONS.map(({ range, src }) => (
+      {BADGE_RANGE_ICONS.map(({ range, used, remaining }) => (
         <span className="auo-scale__step" key={range}>
-          <img src={src} alt="" width={30} height={30} />
-          <em>{range}%</em>
+          <img
+            src={percentageDisplay === 'remaining' ? remaining : used}
+            alt=""
+            width={30}
+            height={30}
+          />
+          <em>{percentageDisplay === 'remaining' ? 100 - range : range}%</em>
         </span>
       ))}
     </div>
@@ -54,6 +66,7 @@ const RangeScale = () => (
 export const BadgeSettingsSection = ({
   badge,
   providers,
+  percentageDisplay,
   onBadgeModeChange,
   onBadgeMetricChange,
   onBadgeProviderChange,
@@ -122,7 +135,7 @@ export const BadgeSettingsSection = ({
         </label>
       </div>
 
-      <RangeScale />
+      <RangeScale percentageDisplay={percentageDisplay} />
     </div>
   </SettingsSection>
 );

@@ -63,7 +63,7 @@ describe('percentage display preferences', () => {
     }
   });
 
-  it('changes badge tooltip percentages while retaining the highest-used icon range', async () => {
+  it('shows remaining in the badge tooltip and icon for the highest-used range', async () => {
     const settings = createDefaultSettings();
     settings.percentageDisplay = 'remaining';
     const icons = [];
@@ -97,6 +97,6 @@ describe('percentage display preferences', () => {
     await updateBadge({ claude: usage(13), codex: usage(93) });
     assert.ok(title.includes('87% left'));
     assert.ok(title.includes('7% left'));
-    assert.ok(icons.every((path) => path === 'icons/badges/range-90.png'));
+    assert.ok(icons.every((path) => path === 'icons/badges/remaining-90.png'));
   });
 });

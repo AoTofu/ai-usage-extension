@@ -15,6 +15,9 @@ export const formatUsagePercent = (value: number, display: PercentageDisplay): s
   return display === 'remaining' ? msg('percentageRemaining', String(100 - used)) : `${used}%`;
 };
 
+export const badgeIconPath = (range: number, display: PercentageDisplay = 'used'): string =>
+  `icons/badges/${display === 'remaining' ? 'remaining' : 'range'}-${range}.png`;
+
 export const isLimitAvailable = (limit: UsageLimit | undefined): boolean =>
   Boolean(limit) && limit?.available !== false;
 

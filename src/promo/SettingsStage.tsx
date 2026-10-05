@@ -26,6 +26,7 @@ export const SettingsStage = ({ view }: { view: SettingsView }) => (
       <>
         <BadgeSettingsSection
           badge={SETTINGS.badge}
+          percentageDisplay={SETTINGS.percentageDisplay}
           providers={SETTINGS.providers}
           onBadgeModeChange={noop}
           onBadgeMetricChange={noop}
