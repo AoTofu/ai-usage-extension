@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Zostáva"
+  },
+  "optionsPercentageDescription": {
+    "message": "Zobrazte, koľko z každého limitu je využité alebo zostáva."
   }
 }

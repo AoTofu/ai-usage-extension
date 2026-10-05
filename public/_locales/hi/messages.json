@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "शेष"
+  },
+  "optionsPercentageDescription": {
+    "message": "दिखाएँ कि हर सीमा का कितना उपयोग हुआ है या कितना शेष है।"
   }
 }

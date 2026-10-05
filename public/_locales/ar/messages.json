@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "المتبقي"
+  },
+  "optionsPercentageDescription": {
+    "message": "اعرض مقدار ما استُخدم أو تبقّى من كل حد."
   }
 }

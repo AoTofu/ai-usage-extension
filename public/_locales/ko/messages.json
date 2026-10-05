@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "남은 양"
+  },
+  "optionsPercentageDescription": {
+    "message": "각 한도의 사용량 또는 남은 양을 표시합니다."
   }
 }

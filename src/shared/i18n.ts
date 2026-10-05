@@ -11,6 +11,7 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   optionsRefreshInterval: 'Interval (minutes, minimum 1)',
   percentageRemaining: '$1% left',
   optionsPercentageTitle: 'Limit display',
+  optionsPercentageDescription: 'Show how much of each limit is used or left.',
   optionsPercentageUsed: 'Used',
   optionsPercentageRemaining: 'Remaining',
   refreshUsage: 'Refresh usage',

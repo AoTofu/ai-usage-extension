@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "બાકી"
+  },
+  "optionsPercentageDescription": {
+    "message": "દરેક મર્યાદામાંથી કેટલું વપરાયું છે અથવા બાકી છે તે બતાવો."
   }
 }

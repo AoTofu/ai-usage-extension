@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Berbaki"
+  },
+  "optionsPercentageDescription": {
+    "message": "Tunjukkan berapa banyak setiap had yang telah digunakan atau berbaki."
   }
 }

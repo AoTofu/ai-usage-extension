@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "剩余"
+  },
+  "optionsPercentageDescription": {
+    "message": "显示每项限额的已用量或剩余量。"
   }
 }

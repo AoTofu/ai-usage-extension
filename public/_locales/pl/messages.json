@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Pozostało"
+  },
+  "optionsPercentageDescription": {
+    "message": "Pokazuj, ile z każdego limitu zużyto lub pozostało."
   }
 }

@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Còn lại"
+  },
+  "optionsPercentageDescription": {
+    "message": "Hiển thị mức đã dùng hoặc còn lại của mỗi giới hạn."
   }
 }

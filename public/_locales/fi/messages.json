@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Jäljellä"
+  },
+  "optionsPercentageDescription": {
+    "message": "Näytä, kuinka paljon kustakin rajasta on käytetty tai jäljellä."
   }
 }

@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "คงเหลือ"
+  },
+  "optionsPercentageDescription": {
+    "message": "แสดงว่าแต่ละขีดจำกัดใช้ไปหรือคงเหลือเท่าใด"
   }
 }

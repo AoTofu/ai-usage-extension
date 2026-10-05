@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Natitira"
+  },
+  "optionsPercentageDescription": {
+    "message": "Ipakita kung gaano karami sa bawat limitasyon ang nagamit o natitira."
   }
 }

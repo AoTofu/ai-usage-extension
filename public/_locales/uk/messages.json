@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Залишилося"
+  },
+  "optionsPercentageDescription": {
+    "message": "Показувати, скільки кожного ліміту використано або залишилося."
   }
 }

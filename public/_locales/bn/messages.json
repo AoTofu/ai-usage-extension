@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "বাকি"
+  },
+  "optionsPercentageDescription": {
+    "message": "প্রতিটি সীমার কতটা ব্যবহৃত হয়েছে বা বাকি আছে তা দেখান।"
   }
 }

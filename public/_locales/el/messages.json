@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Υπόλοιπο"
+  },
+  "optionsPercentageDescription": {
+    "message": "Εμφανίστε πόσο από κάθε όριο έχει χρησιμοποιηθεί ή απομένει."
   }
 }

@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Tersisa"
+  },
+  "optionsPercentageDescription": {
+    "message": "Tampilkan berapa banyak dari setiap batas yang terpakai atau tersisa."
   }
 }

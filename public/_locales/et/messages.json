@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Alles"
+  },
+  "optionsPercentageDescription": {
+    "message": "Näidake, kui palju igast limiidist on kasutatud või alles."
   }
 }

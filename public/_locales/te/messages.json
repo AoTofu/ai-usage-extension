@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "మిగిలినది"
+  },
+  "optionsPercentageDescription": {
+    "message": "ప్రతి పరిమితిలో ఎంత ఉపయోగించారో లేదా ఎంత మిగిలి ఉందో చూపండి."
   }
 }

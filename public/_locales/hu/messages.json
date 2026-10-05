@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Fennmaradó"
+  },
+  "optionsPercentageDescription": {
+    "message": "Mutassa, hogy az egyes korlátokból mennyi fogyott el vagy maradt."
   }
 }

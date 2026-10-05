@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Atlicis"
+  },
+  "optionsPercentageDescription": {
+    "message": "Rādiet, cik no katra limita ir izmantots vai atlicis."
   }
 }

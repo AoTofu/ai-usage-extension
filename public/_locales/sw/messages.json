@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Imebaki"
+  },
+  "optionsPercentageDescription": {
+    "message": "Onyesha kiasi kilichotumika au kilichobaki cha kila kikomo."
   }
 }

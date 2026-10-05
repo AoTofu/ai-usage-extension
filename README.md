@@ -54,7 +54,7 @@ automatic usage requests on worker startup, popup/overlay opening, and credentia
 changes. Cached data remains visible until you press Refresh. A request already
 in progress when you switch modes is allowed to finish.
 
-Under **Popup layout**, **Limit display** switches between **Used** and **Remaining**.
+In **Settings**, **Limit display** switches between **Used** and **Remaining**.
 Only the percentage labels change: progress-bar fill, warning colors, badge icon
 ranges, raw counts, and stored usage calculations still use the consumed amount.
 

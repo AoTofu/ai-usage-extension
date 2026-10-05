@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Återstående"
+  },
+  "optionsPercentageDescription": {
+    "message": "Visa hur mycket av varje gräns som har använts eller återstår."
   }
 }

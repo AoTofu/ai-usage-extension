@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Liko"
+  },
+  "optionsPercentageDescription": {
+    "message": "Rodykite, kiek kiekvieno limito išnaudota arba liko."
   }
 }

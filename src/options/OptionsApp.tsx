@@ -4,6 +4,7 @@ import { msg } from '../shared/i18n';
 import { BadgeSettingsSection } from './components/BadgeSettingsSection';
 import { DisplaySettingsSection } from './components/DisplaySettingsSection';
 import { LanguageSettingsSection } from './components/LanguageSettingsSection';
+import { LimitDisplaySettingsSection } from './components/LimitDisplaySettingsSection';
 import { OptionsHeader } from './components/OptionsHeader';
 import { OptionsNavigation } from './components/OptionsNavigation';
 import { OverlaySettingsSection } from './components/OverlaySettingsSection';
@@ -84,12 +85,14 @@ export const OptionsApp = () => {
           />
           <DisplaySettingsSection
             popupLayout={settings.popupLayout}
+            onPopupLayoutChange={(layout) =>
+              updateSettings((current) => withPopupLayout(current, layout))
+            }
+          />
+          <LimitDisplaySettingsSection
             percentageDisplay={settings.percentageDisplay}
             onPercentageDisplayChange={(percentageDisplay) =>
               updateSettings((current) => ({ ...current, percentageDisplay }))
-            }
-            onPopupLayoutChange={(layout) =>
-              updateSettings((current) => withPopupLayout(current, layout))
             }
           />
           <RefreshSettingsSection

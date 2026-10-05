@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "باقی‌مانده"
+  },
+  "optionsPercentageDescription": {
+    "message": "نشان دهید چه مقدار از هر محدودیت مصرف شده یا باقی مانده است."
   }
 }

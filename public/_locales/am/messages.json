@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "የቀረ"
+  },
+  "optionsPercentageDescription": {
+    "message": "ከእያንዳንዱ ገደብ ምን ያህል እንደተጠቀሙ ወይም እንደቀረ ያሳዩ።"
   }
 }

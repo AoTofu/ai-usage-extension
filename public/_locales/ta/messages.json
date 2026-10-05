@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "மீதமுள்ளது"
+  },
+  "optionsPercentageDescription": {
+    "message": "ஒவ்வொரு வரம்பிலும் எவ்வளவு பயன்படுத்தப்பட்டது அல்லது மீதமுள்ளது என்பதைக் காட்டவும்."
   }
 }

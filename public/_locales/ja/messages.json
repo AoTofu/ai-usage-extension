@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "残り"
+  },
+  "optionsPercentageDescription": {
+    "message": "各上限の使用量または残量を表示します。"
   }
 }

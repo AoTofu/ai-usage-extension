@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Kalan"
+  },
+  "optionsPercentageDescription": {
+    "message": "Her limitin ne kadarının kullanıldığını veya kaldığını gösterin."
   }
 }

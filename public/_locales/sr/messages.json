@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Преостало"
+  },
+  "optionsPercentageDescription": {
+    "message": "Прикажите колико је сваког ограничења искоришћено или преостало."
   }
 }

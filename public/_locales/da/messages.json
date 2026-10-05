@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Tilbage"
+  },
+  "optionsPercentageDescription": {
+    "message": "Vis, hvor meget af hver grænse der er brugt eller tilbage."
   }
 }

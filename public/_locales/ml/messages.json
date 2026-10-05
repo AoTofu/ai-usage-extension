@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "ബാക്കി"
+  },
+  "optionsPercentageDescription": {
+    "message": "ഓരോ പരിധിയിലും എത്ര ഉപയോഗിച്ചു അല്ലെങ്കിൽ എത്ര ബാക്കിയുണ്ട് എന്ന് കാണിക്കുക."
   }
 }

@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Resterend"
+  },
+  "optionsPercentageDescription": {
+    "message": "Toon hoeveel van elke limiet is gebruikt of resterend is."
   }
 }

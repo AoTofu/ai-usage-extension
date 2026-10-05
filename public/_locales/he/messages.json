@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "נותר"
+  },
+  "optionsPercentageDescription": {
+    "message": "הציגו כמה מכל מגבלה נוצל או נותר."
   }
 }

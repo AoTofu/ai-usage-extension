@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "Remaining"
+  },
+  "optionsPercentageDescription": {
+    "message": "Show how much of each limit is used or left."
   }
 }

@@ -4,6 +4,7 @@ import {
   Layers3,
   LayoutDashboard,
   MonitorCog,
+  Percent,
   RefreshCw,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
@@ -32,6 +33,13 @@ export const SECTIONS: SectionDefinition[] = [
     title: msg('optionsLayoutTitle'),
     description: msg('optionsLayoutDescription'),
     Icon: LayoutDashboard,
+  },
+  {
+    id: 'limits',
+    label: msg('optionsPercentageTitle'),
+    title: msg('optionsPercentageTitle'),
+    description: msg('optionsPercentageDescription'),
+    Icon: Percent,
   },
   {
     id: 'refresh',

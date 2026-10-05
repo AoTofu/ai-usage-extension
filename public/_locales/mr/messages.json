@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "शिल्लक"
+  },
+  "optionsPercentageDescription": {
+    "message": "प्रत्येक मर्यादेपैकी किती वापरले किंवा किती शिल्लक आहे ते दाखवा."
   }
 }

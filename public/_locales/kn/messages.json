@@ -379,5 +379,8 @@
   },
   "optionsPercentageRemaining": {
     "message": "ಉಳಿದಿದೆ"
+  },
+  "optionsPercentageDescription": {
+    "message": "ಪ್ರತಿ ಮಿತಿಯಲ್ಲಿ ಎಷ್ಟು ಬಳಸಲಾಗಿದೆ ಅಥವಾ ಉಳಿದಿದೆ ಎಂಬುದನ್ನು ತೋರಿಸಿ."
   }
 }
