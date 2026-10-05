@@ -47,13 +47,13 @@ Then:
 4. Sign in to the providers you want to track, then open the popup. It refreshes automatically
    by default; in manual mode, press **Refresh**.
 
-Open **Settings** to select **Usage refresh** and set a custom interval from 1 to
-1440 minutes (fractional values are supported). The interval is saved when you leave
-the field or press Enter. **Only on Refresh** removes the background alarm and suppresses
+Open **Settings** to select **Usage refresh** and set a custom interval from 1 to 1440
+minutes (fractional values are supported). The interval is saved when you leave the
+field or press Enter. **Only on Refresh** removes the background alarm and suppresses
 automatic usage requests on worker startup and popup/overlay opening. Saving a new
 provider credential still loads usage once. Cached data remains visible until you
-press Refresh. A request already
-in progress when you switch modes is allowed to finish.
+press Refresh. Switching back to automatic mode refreshes immediately. A request
+already in progress when you switch modes is allowed to finish.
 
 In **Settings**, **Limit display** switches between **Used** and **Remaining**.
 Only the percentage labels change: progress-bar fill, warning colors, badge icon

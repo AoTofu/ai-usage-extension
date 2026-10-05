@@ -117,6 +117,10 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
   }
 
   if (areaName === 'local' && changes[STORAGE_KEYS.extensionSettings]) {
+    const { oldValue, newValue } = changes[STORAGE_KEYS.extensionSettings];
+    if (oldValue?.refresh?.mode === 'manual' && newValue?.refresh?.mode !== 'manual') {
+      void refreshUsage().catch(() => undefined);
+    }
     void syncRefreshAlarm().catch(() => undefined);
     void applyStoredLanguage()
       .catch(() => undefined)

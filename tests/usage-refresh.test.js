@@ -374,9 +374,29 @@ describe('worker startup and refresh scheduling', () => {
     await flush();
     assert.equal(calls.refresh, 1);
     setRefresh({ mode: 'auto', intervalMinutes: 30 });
-    chrome.storage.onChanged.emit({ ai_usage_settings: { newValue: {} } }, 'local');
+    chrome.storage.onChanged.emit(
+      {
+        ai_usage_settings: {
+          oldValue: { refresh: { mode: 'manual', intervalMinutes: 12.5 } },
+          newValue: { refresh: { mode: 'auto', intervalMinutes: 30 } },
+        },
+      },
+      'local',
+    );
     await flush();
     assert.equal(calls.create.at(-1)[1].periodInMinutes, 30);
+    assert.equal(calls.refresh, 2);
+    chrome.storage.onChanged.emit(
+      {
+        ai_usage_settings: {
+          oldValue: { refresh: { mode: 'auto', intervalMinutes: 30 } },
+          newValue: { refresh: { mode: 'auto', intervalMinutes: 30 } },
+        },
+      },
+      'local',
+    );
+    await flush();
+    assert.equal(calls.refresh, 2);
   });
 });
 
