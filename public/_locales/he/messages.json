@@ -367,5 +367,20 @@
   },
   "optionsRefreshInterval": {
     "message": "מרווח (דקות, לפחות 1)"
+  },
+  "percentageUsed": {
+    "message": "$1% בשימוש"
+  },
+  "percentageRemaining": {
+    "message": "$1% נותרו"
+  },
+  "optionsPercentageTitle": {
+    "message": "תצוגת מגבלות"
+  },
+  "optionsPercentageUsed": {
+    "message": "בשימוש"
+  },
+  "optionsPercentageRemaining": {
+    "message": "נותר"
   }
 }

@@ -367,5 +367,20 @@
   },
   "optionsRefreshInterval": {
     "message": "Időköz (perc, legalább 1)"
+  },
+  "percentageUsed": {
+    "message": "$1% felhasználva"
+  },
+  "percentageRemaining": {
+    "message": "$1% maradt"
+  },
+  "optionsPercentageTitle": {
+    "message": "Korlátok megjelenítése"
+  },
+  "optionsPercentageUsed": {
+    "message": "Felhasznált"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Fennmaradó"
   }
 }

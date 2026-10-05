@@ -81,6 +81,7 @@ export const createDefaultSettings = (): ExtensionSettings => ({
   language: 'auto',
   popupLayout: 'single',
   refresh: { mode: 'auto', intervalMinutes: REFRESH_INTERVAL_MINUTES },
+  percentageDisplay: 'used',
   providers: Object.fromEntries(
     PROVIDER_IDS.map((provider) => [provider, defaultProvider(provider)]),
   ) as ExtensionSettings['providers'],
@@ -142,6 +143,7 @@ export const normalizeSettings = (
           ? candidate.refresh.intervalMinutes
           : REFRESH_INTERVAL_MINUTES,
     },
+    percentageDisplay: candidate.percentageDisplay === 'remaining' ? 'remaining' : 'used',
     providers,
     badge: {
       mode: candidate.badge?.mode === 'provider' ? 'provider' : 'highest',

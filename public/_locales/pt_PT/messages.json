@@ -367,5 +367,20 @@
   },
   "optionsRefreshInterval": {
     "message": "Intervalo (minutos, mínimo 1)"
+  },
+  "percentageUsed": {
+    "message": "$1% utilizado"
+  },
+  "percentageRemaining": {
+    "message": "$1% restante"
+  },
+  "optionsPercentageTitle": {
+    "message": "Apresentação dos limites"
+  },
+  "optionsPercentageUsed": {
+    "message": "Utilizado"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Restante"
   }
 }

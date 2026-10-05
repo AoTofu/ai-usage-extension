@@ -367,5 +367,20 @@
   },
   "optionsRefreshInterval": {
     "message": "Intervall (minuter, minst 1)"
+  },
+  "percentageUsed": {
+    "message": "$1% använt"
+  },
+  "percentageRemaining": {
+    "message": "$1% kvar"
+  },
+  "optionsPercentageTitle": {
+    "message": "Visning av gränser"
+  },
+  "optionsPercentageUsed": {
+    "message": "Använt"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Återstående"
   }
 }

@@ -367,5 +367,20 @@
   },
   "optionsRefreshInterval": {
     "message": "Interval (minute, najmanj 1)"
+  },
+  "percentageUsed": {
+    "message": "$1% porabljeno"
+  },
+  "percentageRemaining": {
+    "message": "$1% preostalo"
+  },
+  "optionsPercentageTitle": {
+    "message": "Prikaz omejitev"
+  },
+  "optionsPercentageUsed": {
+    "message": "Porabljeno"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Preostalo"
   }
 }

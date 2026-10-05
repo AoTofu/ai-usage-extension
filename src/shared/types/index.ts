@@ -92,6 +92,7 @@ export interface UsageState {
 
 export type PopupLayout = 'single' | 'grid';
 export type RefreshMode = 'auto' | 'manual';
+export type PercentageDisplay = 'used' | 'remaining';
 export type ProviderMetric =
   | 'session'
   | 'weekly'
@@ -116,6 +117,7 @@ export interface ExtensionSettings {
     mode: RefreshMode;
     intervalMinutes: number;
   };
+  percentageDisplay: PercentageDisplay;
   providers: Record<ProviderId, ProviderDisplaySettings>;
   badge: {
     mode: BadgeMode;

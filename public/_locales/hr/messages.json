@@ -367,5 +367,20 @@
   },
   "optionsRefreshInterval": {
     "message": "Interval (minute, najmanje 1)"
+  },
+  "percentageUsed": {
+    "message": "$1% iskorišteno"
+  },
+  "percentageRemaining": {
+    "message": "$1% preostalo"
+  },
+  "optionsPercentageTitle": {
+    "message": "Prikaz ograničenja"
+  },
+  "optionsPercentageUsed": {
+    "message": "Iskorišteno"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Preostalo"
   }
 }

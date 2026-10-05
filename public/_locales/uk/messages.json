@@ -367,5 +367,20 @@
   },
   "optionsRefreshInterval": {
     "message": "Інтервал (хвилини, мінімум 1)"
+  },
+  "percentageUsed": {
+    "message": "Використано $1%"
+  },
+  "percentageRemaining": {
+    "message": "Залишилося $1%"
+  },
+  "optionsPercentageTitle": {
+    "message": "Відображення лімітів"
+  },
+  "optionsPercentageUsed": {
+    "message": "Використано"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Залишилося"
   }
 }

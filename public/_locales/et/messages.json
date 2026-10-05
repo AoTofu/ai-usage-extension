@@ -367,5 +367,20 @@
   },
   "optionsRefreshInterval": {
     "message": "Intervall (minutites, vähemalt 1)"
+  },
+  "percentageUsed": {
+    "message": "$1% kasutatud"
+  },
+  "percentageRemaining": {
+    "message": "$1% alles"
+  },
+  "optionsPercentageTitle": {
+    "message": "Limiitide kuvamine"
+  },
+  "optionsPercentageUsed": {
+    "message": "Kasutatud"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Alles"
   }
 }

@@ -367,5 +367,20 @@
   },
   "optionsRefreshInterval": {
     "message": "ಮಧ್ಯಂತರ (ನಿಮಿಷ, ಕನಿಷ್ಠ 1)"
+  },
+  "percentageUsed": {
+    "message": "$1% ಬಳಸಲಾಗಿದೆ"
+  },
+  "percentageRemaining": {
+    "message": "$1% ಉಳಿದಿದೆ"
+  },
+  "optionsPercentageTitle": {
+    "message": "ಮಿತಿ ಪ್ರದರ್ಶನ"
+  },
+  "optionsPercentageUsed": {
+    "message": "ಬಳಸಲಾಗಿದೆ"
+  },
+  "optionsPercentageRemaining": {
+    "message": "ಉಳಿದಿದೆ"
   }
 }

@@ -367,5 +367,20 @@
   },
   "optionsRefreshInterval": {
     "message": "الفاصل (بالدقائق، الحد الأدنى 1)"
+  },
+  "percentageUsed": {
+    "message": "تم استخدام $1%"
+  },
+  "percentageRemaining": {
+    "message": "متبقٍ $1%"
+  },
+  "optionsPercentageTitle": {
+    "message": "عرض الحدود"
+  },
+  "optionsPercentageUsed": {
+    "message": "المستخدم"
+  },
+  "optionsPercentageRemaining": {
+    "message": "المتبقي"
   }
 }

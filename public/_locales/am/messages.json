@@ -367,5 +367,20 @@
   },
   "optionsRefreshInterval": {
     "message": "ክፍተት (ደቂቃ፣ ቢያንስ 1)"
+  },
+  "percentageUsed": {
+    "message": "$1% ጥቅም ላይ ውሏል"
+  },
+  "percentageRemaining": {
+    "message": "$1% ቀርቷል"
+  },
+  "optionsPercentageTitle": {
+    "message": "የገደብ ማሳያ"
+  },
+  "optionsPercentageUsed": {
+    "message": "ጥቅም ላይ የዋለ"
+  },
+  "optionsPercentageRemaining": {
+    "message": "የቀረ"
   }
 }

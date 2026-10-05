@@ -367,5 +367,20 @@
   },
   "optionsRefreshInterval": {
     "message": "अंतराल (मिनट, न्यूनतम 1)"
+  },
+  "percentageUsed": {
+    "message": "$1% उपयोग हुआ"
+  },
+  "percentageRemaining": {
+    "message": "$1% शेष"
+  },
+  "optionsPercentageTitle": {
+    "message": "सीमा प्रदर्शन"
+  },
+  "optionsPercentageUsed": {
+    "message": "उपयोग हुआ"
+  },
+  "optionsPercentageRemaining": {
+    "message": "शेष"
   }
 }

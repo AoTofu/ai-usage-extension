@@ -367,5 +367,20 @@
   },
   "optionsRefreshInterval": {
     "message": "Interval (minuty, nejméně 1)"
+  },
+  "percentageUsed": {
+    "message": "$1% využito"
+  },
+  "percentageRemaining": {
+    "message": "$1% zbývá"
+  },
+  "optionsPercentageTitle": {
+    "message": "Zobrazení limitů"
+  },
+  "optionsPercentageUsed": {
+    "message": "Využito"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Zbývá"
   }
 }

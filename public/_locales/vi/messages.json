@@ -367,5 +367,20 @@
   },
   "optionsRefreshInterval": {
     "message": "Khoảng thời gian (phút, tối thiểu 1)"
+  },
+  "percentageUsed": {
+    "message": "Đã dùng $1%"
+  },
+  "percentageRemaining": {
+    "message": "Còn $1%"
+  },
+  "optionsPercentageTitle": {
+    "message": "Hiển thị giới hạn"
+  },
+  "optionsPercentageUsed": {
+    "message": "Đã dùng"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Còn lại"
   }
 }
