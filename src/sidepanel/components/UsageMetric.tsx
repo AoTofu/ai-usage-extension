@@ -1,7 +1,7 @@
 import React from 'react';
 import { msg } from '../../shared/i18n';
 import type { PercentageDisplay, UsageLimit } from '../../shared/types';
-import { formatReset } from '../../shared/utils';
+import { formatReset, formatUsagePace, getUsagePace } from '../../shared/utils';
 import { ProgressBar } from './ProgressBar';
 
 interface UsageMetricProps {
@@ -12,7 +12,7 @@ interface UsageMetricProps {
   percentageDisplay?: PercentageDisplay;
 }
 
-/** A labelled progress bar plus its "used / limit · resets" caption. */
+/** A labelled progress bar plus its "used / limit · resets" caption and even-pace target. */
 export const UsageMetric: React.FC<UsageMetricProps> = ({
   label,
   limit,
@@ -25,6 +25,7 @@ export const UsageMetric: React.FC<UsageMetricProps> = ({
     (typeof limit.used === 'number' && typeof limit.limit === 'number' && limit.limit > 0
       ? `${limit.used} / ${limit.limit}`
       : null);
+  const pace = getUsagePace(limit, now);
 
   return (
     <div className="au-metric">
@@ -32,6 +33,7 @@ export const UsageMetric: React.FC<UsageMetricProps> = ({
         label={label}
         percentage={limit.percentage}
         percentageDisplay={percentageDisplay}
+        target={pace?.target ?? null}
       />
       {(count !== null || showReset) && (
         <p className="au-meta">
@@ -42,6 +44,11 @@ export const UsageMetric: React.FC<UsageMetricProps> = ({
             </>
           )}
           {showReset && msg('resetsLabel', formatReset(limit.resetsAt, now))}
+        </p>
+      )}
+      {pace && (
+        <p className={`au-meta au-pace ${pace.delta > 0 ? 'au-pace--over' : ''}`}>
+          {formatUsagePace(pace, percentageDisplay)}
         </p>
       )}
     </div>

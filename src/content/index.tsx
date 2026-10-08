@@ -27,7 +27,9 @@ import {
   clampPercent,
   formatRelativeTime,
   formatReset,
+  formatUsagePace,
   formatUsagePercent,
+  getUsagePace,
   getUsageTone,
   isLimitAvailable,
 } from '../shared/utils';
@@ -66,6 +68,7 @@ const OverlayMetric: React.FC<OverlayMetricProps> = ({ label, limit, now, percen
     (typeof limit.used === 'number' && typeof limit.limit === 'number' && limit.limit > 0
       ? `${limit.used} / ${limit.limit}`
       : null);
+  const pace = getUsagePace(limit, now);
 
   return (
     <div className="aiu-group">
@@ -73,16 +76,25 @@ const OverlayMetric: React.FC<OverlayMetricProps> = ({ label, limit, now, percen
         <span className="aiu-label">{label}</span>
         <span className="aiu-value">{formatUsagePercent(percent, percentageDisplay)}</span>
       </div>
-      <div
-        className={`aiu-meter aiu-meter--${getUsageTone(percent)}`}
-        role="progressbar"
-        aria-label={label}
-        aria-valuenow={percent}
-        aria-valuetext={formatUsagePercent(percent, percentageDisplay)}
-        aria-valuemin={0}
-        aria-valuemax={100}
-      >
-        <div className="aiu-meter__fill" style={{ width: `${percent}%` }} />
+      <div className="aiu-meter-wrap">
+        <div
+          className={`aiu-meter aiu-meter--${getUsageTone(percent)}`}
+          role="progressbar"
+          aria-label={label}
+          aria-valuenow={percent}
+          aria-valuetext={formatUsagePercent(percent, percentageDisplay)}
+          aria-valuemin={0}
+          aria-valuemax={100}
+        >
+          <div className="aiu-meter__fill" style={{ width: `${percent}%` }} />
+        </div>
+        {pace && (
+          <div
+            className={`aiu-meter__pace ${pace.delta > 0 ? 'aiu-meter__pace--over' : ''}`}
+            style={{ left: `${pace.target}%` }}
+            aria-hidden="true"
+          />
+        )}
       </div>
       <div className="aiu-meta">
         {count !== null && (
@@ -93,6 +105,11 @@ const OverlayMetric: React.FC<OverlayMetricProps> = ({ label, limit, now, percen
         )}
         {msg('resetsLabel', formatReset(limit.resetsAt, now))}
       </div>
+      {pace && (
+        <div className={`aiu-meta aiu-pace ${pace.delta > 0 ? 'aiu-pace--over' : ''}`}>
+          {formatUsagePace(pace, percentageDisplay)}
+        </div>
+      )}
     </div>
   );
 };

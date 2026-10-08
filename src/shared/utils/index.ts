@@ -92,3 +92,47 @@ export const formatRelativeTime = (timestamp: number, now: number): string => {
 
   return msg('timeAgo', `${Math.floor(hours / 24)}${msg('timeDayShort')}`);
 };
+
+export interface UsagePace {
+  /** Share of the window that has elapsed (0–100): the usage you can spend by now to hit 100% exactly at reset. */
+  target: number;
+  /** Current usage minus the target; positive means ahead of an even pace. */
+  delta: number;
+}
+
+/**
+ * Even-pace budget for a rolling window: if the limit is spent linearly so that it hits
+ * 100% exactly at reset, how much of it may be used by `now`?
+ * Returns `null` when the window length or reset time is unknown.
+ */
+export const getUsagePace = (limit: UsageLimit | undefined, now: number): UsagePace | null => {
+  if (!limit || limit.available === false || !limit.resetsAt || !limit.windowSeconds) {
+    return null;
+  }
+
+  const resetAt = new Date(limit.resetsAt).getTime();
+  const windowMs = limit.windowSeconds * 1000;
+  if (!Number.isFinite(resetAt) || windowMs <= 0) {
+    return null;
+  }
+
+  const remainingMs = resetAt - now;
+  // A reset already in the past or far beyond one window means the snapshot is stale.
+  if (remainingMs <= 0 || remainingMs > windowMs * 1.5) {
+    return null;
+  }
+
+  const elapsedShare = Math.max(0, Math.min(1, 1 - remainingMs / windowMs));
+  const target = clampPercent(elapsedShare * 100);
+  return { target, delta: clampPercent(limit.percentage) - target };
+};
+
+/** Caption such as `pace 42% · 12% to spare`, honouring the used/remaining preference. */
+export const formatUsagePace = (pace: UsagePace, display: PercentageDisplay): string => {
+  const target = msg('paceTargetLabel', formatUsagePercent(pace.target, display));
+  if (pace.delta === 0) {
+    return `${target} · ${msg('paceOnTrack')}`;
+  }
+  const amount = `${Math.abs(pace.delta)}%`;
+  return `${target} · ${msg(pace.delta > 0 ? 'paceOver' : 'paceUnder', amount)}`;
+};

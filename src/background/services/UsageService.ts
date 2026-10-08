@@ -122,10 +122,18 @@ const firstString = (...candidates: unknown[]): string | null => {
   return null;
 };
 
-const buildLimit = (percent: number | null, resetsAt: string | null): UsageLimit => ({
+const buildLimit = (
+  percent: number | null,
+  resetsAt: string | null,
+  windowSeconds?: number | null,
+): UsageLimit => ({
   percentage: clampPercent(percent ?? 0),
   resetsAt,
+  ...(windowSeconds && windowSeconds > 0 ? { windowSeconds } : {}),
 });
+
+const FIVE_HOURS_SECONDS = 5 * 60 * 60;
+const SEVEN_DAYS_SECONDS = 7 * 24 * 60 * 60;
 
 const unavailableLimit = (): UsageLimit => ({ percentage: 0, resetsAt: null, available: false });
 
@@ -151,11 +159,11 @@ const humanizeSlug = (slug: string): string =>
 
 /* -------------------- Claude -------------------- */
 
-const claudeWindowFrom = (window: unknown): UsageLimit => {
+const claudeWindowFrom = (window: unknown, windowSeconds: number): UsageLimit => {
   if (!isObject(window)) return unavailableLimit();
   const utilization = readNumber(window.utilization);
   if (utilization === null) return unavailableLimit();
-  return buildLimit(utilization, readString(window.resets_at));
+  return buildLimit(utilization, readString(window.resets_at), windowSeconds);
 };
 
 const claudeModelBreakdown = (raw: Json): ModelUsage[] => {
@@ -169,11 +177,16 @@ const claudeModelBreakdown = (raw: Json): ModelUsage[] => {
     const displayName = model ? readString(model.display_name) : null;
     if (!displayName) return models;
 
-    const tag = entry.group === 'session' ? '5h' : '7d';
+    const isSession = entry.group === 'session';
+    const tag = isSession ? '5h' : '7d';
     models.push({
       id: `${readString(entry.kind) ?? 'scoped'}-${index}`,
       label: `${displayName} · ${tag}`,
-      limit: buildLimit(readNumber(entry.percent), readString(entry.resets_at)),
+      limit: buildLimit(
+        readNumber(entry.percent),
+        readString(entry.resets_at),
+        isSession ? FIVE_HOURS_SECONDS : SEVEN_DAYS_SECONDS,
+      ),
     });
     return models;
   }, []);
@@ -187,15 +200,15 @@ const CLAUDE_SCOPED_WINDOWS = [
 
 const claudeScopedWindows = (raw: Json): ModelUsage[] =>
   CLAUDE_SCOPED_WINDOWS.flatMap(([key, label]) => {
-    const limit = claudeWindowFrom(raw[key]);
+    const limit = claudeWindowFrom(raw[key], SEVEN_DAYS_SECONDS);
     return isLimitAvailable(limit) ? [{ id: `claude:${key}`, label: `${label} · 7d`, limit }] : [];
   });
 
 const buildClaudeUsage = (raw: Json | null): ClaudeUsage | null => {
   if (!raw) return null;
 
-  const session = claudeWindowFrom(raw.five_hour);
-  const weekly = claudeWindowFrom(raw.seven_day);
+  const session = claudeWindowFrom(raw.five_hour, FIVE_HOURS_SECONDS);
+  const weekly = claudeWindowFrom(raw.seven_day, SEVEN_DAYS_SECONDS);
   const models = [...claudeModelBreakdown(raw), ...claudeScopedWindows(raw)];
   if (!isLimitAvailable(session) && !isLimitAvailable(weekly) && !models.length) return null;
 
@@ -243,9 +256,18 @@ const codexResetTimestamp = (window: Json): string | null => {
   return null;
 };
 
-const codexWindowFrom = (window: unknown): UsageLimit => {
+const codexWindowFrom = (window: unknown, kind: 'session' | 'weekly'): UsageLimit => {
   if (!isObject(window)) return buildLimit(0, null);
-  return buildLimit(readNumber(window.used_percent), codexResetTimestamp(window));
+  const seconds = readNumber(window.limit_window_seconds);
+  return buildLimit(
+    readNumber(window.used_percent),
+    codexResetTimestamp(window),
+    seconds !== null && seconds > 0
+      ? seconds
+      : kind === 'session'
+        ? FIVE_HOURS_SECONDS
+        : SEVEN_DAYS_SECONDS,
+  );
 };
 
 const CODEX_SESSION_MAX_SECONDS = 24 * 60 * 60;
@@ -275,11 +297,12 @@ const codexRateLimitWindows = (id: string, label: string, entry: Json): ModelUsa
   for (const [slot, fallback] of CODEX_WINDOW_SLOTS) {
     const window = entry[slot];
     if (!isObject(window)) continue;
-    const tag = codexWindowTag(window, codexWindowKind(window, fallback));
+    const kind = codexWindowKind(window, fallback);
+    const tag = codexWindowTag(window, kind);
     windows.push({
       id: `${id}:${tag}`,
       label: `${label} · ${tag}`,
-      limit: codexWindowFrom(window),
+      limit: codexWindowFrom(window, kind),
     });
   }
   return windows;
@@ -321,7 +344,8 @@ const codexWindows = (rate: Json | null): { session: UsageLimit; weekly: UsageLi
   for (const [slot, fallback] of CODEX_WINDOW_SLOTS) {
     const window = rate?.[slot];
     if (!isObject(window)) continue;
-    windows[codexWindowKind(window, fallback)] = codexWindowFrom(window);
+    const kind = codexWindowKind(window, fallback);
+    windows[kind] = codexWindowFrom(window, kind);
   }
   return windows;
 };

@@ -56,6 +56,18 @@
   "resetsLabel": {
     "message": "$1 后重置"
   },
+  "paceTargetLabel": {
+    "message": "目标 $1"
+  },
+  "paceUnder": {
+    "message": "剩余余量 $1"
+  },
+  "paceOver": {
+    "message": "超出 $1"
+  },
+  "paceOnTrack": {
+    "message": "节奏正好"
+  },
   "nextResetLabel": {
     "message": "$1 后重置"
   },

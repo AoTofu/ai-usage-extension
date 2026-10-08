@@ -23,6 +23,8 @@ export interface UsageLimit {
   limit?: number;
   countLabel?: string;
   available?: boolean;
+  /** Length of the rolling window in seconds, used to compute the even-pace target. */
+  windowSeconds?: number;
 }
 
 export interface ProviderLink {

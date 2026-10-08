@@ -56,6 +56,18 @@
   "resetsLabel": {
     "message": "$1 후 초기화"
   },
+  "paceTargetLabel": {
+    "message": "목표 $1"
+  },
+  "paceUnder": {
+    "message": "여유 $1"
+  },
+  "paceOver": {
+    "message": "$1 초과"
+  },
+  "paceOnTrack": {
+    "message": "적정 속도"
+  },
   "nextResetLabel": {
     "message": "$1 후 초기화"
   },

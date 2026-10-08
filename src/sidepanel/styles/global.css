@@ -406,6 +406,34 @@ input {
   color: var(--au-text-muted);
 }
 
+/* Even-pace target: where usage should be now to hit 100% exactly at reset. */
+.au-meter-wrap {
+  position: relative;
+}
+
+.au-meter__pace {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 2px;
+  margin-left: -1px;
+  border-radius: 1px;
+  background: var(--au-text-muted);
+  pointer-events: none;
+}
+
+.au-meter__pace--over {
+  background: var(--au-fill-warning);
+}
+
+.au-pace {
+  margin-top: -3px;
+}
+
+.au-pace--over {
+  color: var(--au-fill-warning);
+}
+
 .au-footnote {
   margin: 0;
   font-size: 11px;

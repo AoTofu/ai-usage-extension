@@ -180,6 +180,34 @@
   color: var(--aiu-muted);
 }
 
+/* Even-pace target: where usage should be now to hit 100% exactly at reset. */
+.aiu-meter-wrap {
+  position: relative;
+}
+
+.aiu-meter__pace {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 2px;
+  margin-left: -1px;
+  border-radius: 1px;
+  background: var(--aiu-muted);
+  pointer-events: none;
+}
+
+.aiu-meter__pace--over {
+  background: var(--aiu-fill-warning);
+}
+
+.aiu-pace {
+  margin-top: 3px;
+}
+
+.aiu-pace--over {
+  color: var(--aiu-fill-warning);
+}
+
 .aiu-empty {
   font-size: 12px;
   color: var(--aiu-muted);

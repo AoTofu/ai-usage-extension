@@ -56,6 +56,18 @@
   "resetsLabel": {
     "message": "በ$1 ውስጥ ዳግም ይጀምራል"
   },
+  "paceTargetLabel": {
+    "message": "pace $1"
+  },
+  "paceUnder": {
+    "message": "$1 to spare"
+  },
+  "paceOver": {
+    "message": "$1 over pace"
+  },
+  "paceOnTrack": {
+    "message": "on pace"
+  },
   "nextResetLabel": {
     "message": "በ$1 ውስጥ ዳግም ይጀምራል"
   },

@@ -56,6 +56,18 @@
   "resetsLabel": {
     "message": "nollautuu $1"
   },
+  "paceTargetLabel": {
+    "message": "pace $1"
+  },
+  "paceUnder": {
+    "message": "$1 to spare"
+  },
+  "paceOver": {
+    "message": "$1 over pace"
+  },
+  "paceOnTrack": {
+    "message": "on pace"
+  },
   "nextResetLabel": {
     "message": "nollautuu $1"
   },

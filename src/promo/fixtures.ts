@@ -20,18 +20,25 @@ const resetsIn = (offsetMs: number): string => new Date(NOW + offsetMs).toISOStr
 
 const NO_SECOND_WINDOW = { percentage: 0, resetsAt: null, available: false };
 
+const FIVE_HOURS = 5 * 60 * 60;
+const SEVEN_DAYS = 7 * 24 * 60 * 60;
+
 const CLAUDE_USAGE: ClaudeUsage = {
   plan: 'unknown',
-  session: { percentage: 40, resetsAt: resetsIn(77 * MINUTE) },
-  weekly: { percentage: 47, resetsAt: resetsIn(15 * HOUR + 47 * MINUTE) },
+  session: { percentage: 40, resetsAt: resetsIn(77 * MINUTE), windowSeconds: FIVE_HOURS },
+  weekly: {
+    percentage: 47,
+    resetsAt: resetsIn(15 * HOUR + 47 * MINUTE),
+    windowSeconds: SEVEN_DAYS,
+  },
   models: [],
   status: 'ok',
   lastUpdated: NOW - 3 * MINUTE,
 };
 
 const CODEX_USAGE: CodexUsage = {
-  session: { percentage: 25, resetsAt: resetsIn(83 * MINUTE) },
-  weekly: { percentage: 4, resetsAt: resetsIn(6 * DAY + 20 * HOUR) },
+  session: { percentage: 25, resetsAt: resetsIn(83 * MINUTE), windowSeconds: FIVE_HOURS },
+  weekly: { percentage: 4, resetsAt: resetsIn(6 * DAY + 20 * HOUR), windowSeconds: SEVEN_DAYS },
   models: [],
   availableResets: null,
   status: 'ok',
