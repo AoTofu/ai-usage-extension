@@ -1,12 +1,20 @@
 import { Check } from 'lucide-react';
 import { msg } from '../../shared/i18n';
-import type { PopupLayout } from '../../shared/types';
+import type { PopupLayout, ThemePreference } from '../../shared/types';
 import { SettingsSection } from './SettingsSection';
 
 interface DisplaySettingsSectionProps {
   popupLayout: PopupLayout;
   onPopupLayoutChange: (layout: PopupLayout) => void;
+  theme: ThemePreference;
+  onThemeChange: (theme: ThemePreference) => void;
 }
+
+const THEME_OPTIONS: Array<{ value: ThemePreference; label: string }> = [
+  { value: 'system', label: msg('optionsThemeSystem') },
+  { value: 'light', label: msg('optionsThemeLight') },
+  { value: 'dark', label: msg('optionsThemeDark') },
+];
 
 const LAYOUT_OPTIONS: Array<{
   value: PopupLayout;
@@ -28,6 +36,8 @@ const LAYOUT_OPTIONS: Array<{
 export const DisplaySettingsSection = ({
   popupLayout,
   onPopupLayoutChange,
+  theme,
+  onThemeChange,
 }: DisplaySettingsSectionProps) => (
   <SettingsSection id="display">
     <div className="auo-choice-group" role="radiogroup" aria-label={msg('optionsLayoutTitle')}>
@@ -54,6 +64,21 @@ export const DisplaySettingsSection = ({
           </span>
         </label>
       ))}
+    </div>
+    <div className="auo-select-grid auo-theme-field">
+      <label className="auo-field">
+        <span className="auo-field__label">{msg('optionsThemeTitle')}</span>
+        <select
+          value={theme}
+          onChange={(event) => onThemeChange(event.target.value as ThemePreference)}
+        >
+          {THEME_OPTIONS.map(({ value, label }) => (
+            <option value={value} key={value}>
+              {label}
+            </option>
+          ))}
+        </select>
+      </label>
     </div>
   </SettingsSection>
 );

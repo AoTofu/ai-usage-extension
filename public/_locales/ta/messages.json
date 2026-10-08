@@ -386,6 +386,18 @@
   "optionsPercentageTitle": {
     "message": "வரம்பு காட்சி"
   },
+  "optionsThemeTitle": {
+    "message": "Theme"
+  },
+  "optionsThemeSystem": {
+    "message": "Match system"
+  },
+  "optionsThemeLight": {
+    "message": "Light"
+  },
+  "optionsThemeDark": {
+    "message": "Dark"
+  },
   "optionsPercentageUsed": {
     "message": "பயன்படுத்தியது"
   },

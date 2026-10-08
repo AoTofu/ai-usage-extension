@@ -386,6 +386,18 @@
   "optionsPercentageTitle": {
     "message": "限额显示"
   },
+  "optionsThemeTitle": {
+    "message": "主题"
+  },
+  "optionsThemeSystem": {
+    "message": "跟随系统"
+  },
+  "optionsThemeLight": {
+    "message": "浅色"
+  },
+  "optionsThemeDark": {
+    "message": "深色"
+  },
   "optionsPercentageUsed": {
     "message": "已用"
   },

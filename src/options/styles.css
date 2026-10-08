@@ -24,6 +24,34 @@
   --radius-md: 10px;
   --radius-sm: 8px;
   --ease: cubic-bezier(0.22, 0.8, 0.32, 1);
+  --scroll-thumb-hover: rgba(255, 255, 255, 0.24);
+}
+
+/* Light theme — same warm-neutral system, inverted */
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #f4f3ef;
+  --surface: #ffffff;
+  --surface-hover: #f0eee9;
+  --surface-sunken: #ecebe6;
+
+  --line: rgba(0, 0, 0, 0.09);
+  --line-strong: rgba(0, 0, 0, 0.18);
+
+  --text: #1d1c1a;
+  --muted: #5f5c56;
+  --faint: #77736c;
+
+  --track: rgba(0, 0, 0, 0.08);
+  --fill: #3a3935;
+  --warn: #a8701c;
+  --crit: #b04a36;
+  --scroll-thumb-hover: rgba(0, 0, 0, 0.28);
+}
+
+.auo-theme-field {
+  margin-top: 14px;
 }
 
 * {
@@ -296,7 +324,7 @@ select {
 }
 
 .auo-content::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.24);
+  background: var(--scroll-thumb-hover);
   background-clip: content-box;
 }
 

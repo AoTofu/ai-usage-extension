@@ -100,3 +100,15 @@ describe('percentage display preferences', () => {
     assert.ok(icons.every((path) => path === 'icons/badges/remaining-90.png'));
   });
 });
+
+describe('theme preference', () => {
+  const { createDefaultSettings, normalizeSettings } = loadTypeScript('src/shared/settings.ts');
+
+  it('defaults to following the system and keeps only known themes', () => {
+    assert.equal(createDefaultSettings().theme, 'system');
+    assert.equal(normalizeSettings({ popupLayout: 'grid' }).theme, 'system');
+    assert.equal(normalizeSettings({ theme: 'light' }).theme, 'light');
+    assert.equal(normalizeSettings({ theme: 'dark' }).theme, 'dark');
+    assert.equal(normalizeSettings({ theme: 'sepia' }).theme, 'system');
+  });
+});

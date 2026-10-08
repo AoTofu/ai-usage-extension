@@ -11,6 +11,7 @@ import {
   readExtensionSettings,
 } from '../shared/settings';
 import { useNow } from '../shared/hooks/useNow';
+import { useResolvedTheme } from '../shared/hooks/useTheme';
 import { msg, setLocaleMessages } from '../shared/i18n';
 import { watchLanguage } from '../shared/language';
 import { requestLocaleMessages, requestUsageRefresh } from '../shared/messaging';
@@ -20,6 +21,7 @@ import type {
   ExternalProviderUsage,
   OverlayProviderId,
   PercentageDisplay,
+  ThemePreference,
   UsageLimit,
   UsageState,
 } from '../shared/types';
@@ -145,6 +147,8 @@ const enabledByDefault = OVERLAY_DEFAULTS[usageField];
 const UsageOverlay: React.FC = () => {
   const [enabled, setEnabled] = useState(enabledByDefault);
   const [percentageDisplay, setPercentageDisplay] = useState<PercentageDisplay>('used');
+  const [themePreference, setThemePreference] = useState<ThemePreference>('system');
+  const theme = useResolvedTheme(themePreference);
   const [localeVersion, setLocaleVersion] = useState(0);
   const [usage, setUsage] = useState<ClaudeUsage | CodexUsage | ExternalProviderUsage | null>(null);
   const [collapsed, setCollapsed] = useState(true);
@@ -201,9 +205,9 @@ const UsageOverlay: React.FC = () => {
       setUsage(usageState[usageField] ?? null);
       setEnabled(snapshot[enabledKey] ?? enabledByDefault);
       setCollapsed(snapshot[collapsedKey] !== false);
-      setPercentageDisplay(
-        normalizeSettings(snapshot[STORAGE_KEYS.extensionSettings]).percentageDisplay,
-      );
+      const settings = normalizeSettings(snapshot[STORAGE_KEYS.extensionSettings]);
+      setPercentageDisplay(settings.percentageDisplay);
+      setThemePreference(settings.theme);
       setIsLoading(false);
     };
 
@@ -230,9 +234,9 @@ const UsageOverlay: React.FC = () => {
         setCollapsed(changes[collapsedKey].newValue !== false);
       }
       if (changes[STORAGE_KEYS.extensionSettings]) {
-        setPercentageDisplay(
-          normalizeSettings(changes[STORAGE_KEYS.extensionSettings].newValue).percentageDisplay,
-        );
+        const settings = normalizeSettings(changes[STORAGE_KEYS.extensionSettings].newValue);
+        setPercentageDisplay(settings.percentageDisplay);
+        setThemePreference(settings.theme);
       }
     };
 
@@ -281,7 +285,7 @@ const UsageOverlay: React.FC = () => {
   }
 
   return (
-    <div className="aiu-root" key={localeVersion}>
+    <div className="aiu-root" data-theme={theme} key={localeVersion}>
       <div className={`aiu-wrap ${collapsed ? 'aiu-wrap--collapsed' : ''}`}>
         <button
           type="button"

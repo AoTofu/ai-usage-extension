@@ -386,6 +386,18 @@
   "optionsPercentageTitle": {
     "message": "പരിധി പ്രദർശനം"
   },
+  "optionsThemeTitle": {
+    "message": "Theme"
+  },
+  "optionsThemeSystem": {
+    "message": "Match system"
+  },
+  "optionsThemeLight": {
+    "message": "Light"
+  },
+  "optionsThemeDark": {
+    "message": "Dark"
+  },
   "optionsPercentageUsed": {
     "message": "ഉപയോഗിച്ചത്"
   },

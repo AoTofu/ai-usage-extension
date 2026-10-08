@@ -225,10 +225,10 @@
     "message": "言語を変更するとこのページが再読み込みされます。"
   },
   "optionsLayoutTitle": {
-    "message": "ポップアップのレイアウト"
+    "message": "レイアウトとテーマ"
   },
   "optionsLayoutDescription": {
-    "message": "表示中のプロバイダーカードの並べ方を選びます。"
+    "message": "プロバイダーカードの並べ方と、ライト／ダークのテーマを選びます。"
   },
   "optionsLayoutSingle": {
     "message": "1列"
@@ -385,6 +385,18 @@
   },
   "optionsPercentageTitle": {
     "message": "上限の表示"
+  },
+  "optionsThemeTitle": {
+    "message": "テーマ"
+  },
+  "optionsThemeSystem": {
+    "message": "システムに合わせる"
+  },
+  "optionsThemeLight": {
+    "message": "ライト"
+  },
+  "optionsThemeDark": {
+    "message": "ダーク"
   },
   "optionsPercentageUsed": {
     "message": "使用済み"

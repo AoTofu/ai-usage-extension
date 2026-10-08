@@ -1,6 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { applyCachedTheme } from '../shared/hooks/useTheme';
 import { applyStoredLanguage, watchLanguage } from '../shared/language';
+
+applyCachedTheme();
 
 const container = document.getElementById('root');
 if (!container) {

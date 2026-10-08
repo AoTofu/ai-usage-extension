@@ -12,6 +12,7 @@ import { GITHUB_ISSUES_URL, GITHUB_REPO_URL, POSTHOG_PROJECT_TOKEN } from '../sh
 import { trackFrom } from '../shared/analytics/track';
 import { msg } from '../shared/i18n';
 import { useNow } from '../shared/hooks/useNow';
+import { useDocumentTheme } from '../shared/hooks/useTheme';
 import type { ProviderId, ProviderLink } from '../shared/types';
 import { ProviderCard } from './components/ProviderCard';
 import { ReportDialog } from './components/ReportDialog';
@@ -109,6 +110,7 @@ const track = trackFrom('popup');
 export const App = () => {
   const { usage, settings, loading, refreshing, error, refresh } = useUsageData();
   const now = useNow(30_000);
+  useDocumentTheme(settings?.theme);
   const [reportOpen, setReportOpen] = useState(false);
   const [refreshedHere, setRefreshedHere] = useState(false);
   const showManualHint =

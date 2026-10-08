@@ -386,6 +386,18 @@
   "optionsPercentageTitle": {
     "message": "한도 표시"
   },
+  "optionsThemeTitle": {
+    "message": "테마"
+  },
+  "optionsThemeSystem": {
+    "message": "시스템 설정 따르기"
+  },
+  "optionsThemeLight": {
+    "message": "라이트"
+  },
+  "optionsThemeDark": {
+    "message": "다크"
+  },
   "optionsPercentageUsed": {
     "message": "사용량"
   },

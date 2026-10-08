@@ -386,6 +386,18 @@
   "optionsPercentageTitle": {
     "message": "పరిమితి ప్రదర్శన"
   },
+  "optionsThemeTitle": {
+    "message": "Theme"
+  },
+  "optionsThemeSystem": {
+    "message": "Match system"
+  },
+  "optionsThemeLight": {
+    "message": "Light"
+  },
+  "optionsThemeDark": {
+    "message": "Dark"
+  },
   "optionsPercentageUsed": {
     "message": "ఉపయోగించినది"
   },

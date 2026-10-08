@@ -386,6 +386,18 @@
   "optionsPercentageTitle": {
     "message": "Visning af grænser"
   },
+  "optionsThemeTitle": {
+    "message": "Theme"
+  },
+  "optionsThemeSystem": {
+    "message": "Match system"
+  },
+  "optionsThemeLight": {
+    "message": "Light"
+  },
+  "optionsThemeDark": {
+    "message": "Dark"
+  },
   "optionsPercentageUsed": {
     "message": "Brugt"
   },

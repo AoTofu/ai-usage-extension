@@ -1,7 +1,10 @@
 import { createRoot } from 'react-dom/client';
 import { msg } from '../shared/i18n';
+import { applyCachedTheme } from '../shared/hooks/useTheme';
 import { applyStoredLanguage, watchLanguage } from '../shared/language';
 import './styles.css';
+
+applyCachedTheme();
 
 /*
  * Section titles and metric labels are built with `msg()` at import time, so

@@ -95,6 +95,8 @@ export interface UsageState {
 export type PopupLayout = 'single' | 'grid';
 export type RefreshMode = 'auto' | 'manual';
 export type PercentageDisplay = 'used' | 'remaining';
+/** `system` follows the OS light/dark preference. */
+export type ThemePreference = 'system' | 'light' | 'dark';
 export type ProviderMetric =
   | 'session'
   | 'weekly'
@@ -120,6 +122,7 @@ export interface ExtensionSettings {
     intervalMinutes: number;
   };
   percentageDisplay: PercentageDisplay;
+  theme: ThemePreference;
   providers: Record<ProviderId, ProviderDisplaySettings>;
   badge: {
     mode: BadgeMode;

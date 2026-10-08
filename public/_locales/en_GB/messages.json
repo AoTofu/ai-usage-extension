@@ -225,10 +225,10 @@
     "message": "Switching the language reloads this page."
   },
   "optionsLayoutTitle": {
-    "message": "Popup layout"
+    "message": "Layout & theme"
   },
   "optionsLayoutDescription": {
-    "message": "Choose how visible provider cards are arranged in the popup."
+    "message": "Choose how provider cards are arranged and whether pages use a light or dark theme."
   },
   "optionsLayoutSingle": {
     "message": "One column"
@@ -385,6 +385,18 @@
   },
   "optionsPercentageTitle": {
     "message": "Limit display"
+  },
+  "optionsThemeTitle": {
+    "message": "Theme"
+  },
+  "optionsThemeSystem": {
+    "message": "Match system"
+  },
+  "optionsThemeLight": {
+    "message": "Light"
+  },
+  "optionsThemeDark": {
+    "message": "Dark"
   },
   "optionsPercentageUsed": {
     "message": "Used"

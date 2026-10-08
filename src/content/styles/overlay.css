@@ -11,7 +11,24 @@
   --aiu-fill: #d8d4ca;
   --aiu-fill-warning: #cf9f63;
   --aiu-fill-critical: #c96f5c;
+  --aiu-shadow: rgba(0, 0, 0, 0.3);
   font-family: 'Sohne', 'Avenir Next', 'IBM Plex Sans', 'Segoe UI', sans-serif;
+}
+
+/* Light theme — same warm-neutral system, inverted */
+.aiu-root[data-theme='light'] {
+  color-scheme: light;
+  --aiu-bg: #ffffff;
+  --aiu-line: rgba(0, 0, 0, 0.09);
+  --aiu-line-strong: rgba(0, 0, 0, 0.18);
+  --aiu-text: #1d1c1a;
+  --aiu-muted: #5f5c56;
+  --aiu-faint: #77736c;
+  --aiu-track: rgba(0, 0, 0, 0.08);
+  --aiu-fill: #3a3935;
+  --aiu-fill-warning: #a8701c;
+  --aiu-fill-critical: #b04a36;
+  --aiu-shadow: rgba(0, 0, 0, 0.12);
 }
 
 .aiu-wrap {
@@ -77,7 +94,7 @@
   border-radius: 12px;
   background: var(--aiu-bg);
   color: var(--aiu-text);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px var(--aiu-shadow);
   padding: 14px;
 }
 
@@ -193,6 +210,7 @@
   margin-left: -1px;
   border-radius: 1px;
   background: var(--aiu-muted);
+  box-shadow: 0 0 0 1px var(--aiu-bg);
   pointer-events: none;
 }
 

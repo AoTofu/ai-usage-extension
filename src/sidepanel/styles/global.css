@@ -29,6 +29,28 @@
   -webkit-font-smoothing: antialiased;
 }
 
+/* Light theme — same warm-neutral system, inverted */
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --au-bg: #f4f3ef;
+  --au-surface: #ffffff;
+  --au-surface-hover: #f0eee9;
+
+  --au-line: rgba(0, 0, 0, 0.09);
+  --au-line-strong: rgba(0, 0, 0, 0.18);
+
+  --au-text: #1d1c1a;
+  --au-text-muted: #5f5c56;
+  --au-text-faint: #77736c;
+
+  --au-track: rgba(0, 0, 0, 0.08);
+  --au-fill: #3a3935;
+  --au-fill-warning: #a8701c;
+  --au-fill-critical: #b04a36;
+  --au-shadow: rgba(0, 0, 0, 0.16);
+}
+
 html,
 body,
 #root {
@@ -419,6 +441,7 @@ input {
   margin-left: -1px;
   border-radius: 1px;
   background: var(--au-text-muted);
+  box-shadow: 0 0 0 1px var(--au-surface);
   pointer-events: none;
 }
 
@@ -544,7 +567,7 @@ input {
   border: 1px solid var(--au-line);
   border-radius: 12px;
   background: var(--au-surface);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 18px 40px var(--au-shadow, rgba(0, 0, 0, 0.5));
 }
 
 .au-modal__head {

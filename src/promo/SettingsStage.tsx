@@ -15,7 +15,12 @@ export const SettingsStage = ({ view }: { view: SettingsView }) => (
     {view === 'providers' ? (
       <>
         <LanguageSettingsSection language={SETTINGS.language} onLanguageChange={noop} />
-        <DisplaySettingsSection popupLayout={SETTINGS.popupLayout} onPopupLayoutChange={noop} />
+        <DisplaySettingsSection
+          popupLayout={SETTINGS.popupLayout}
+          onPopupLayoutChange={noop}
+          theme={SETTINGS.theme}
+          onThemeChange={noop}
+        />
         <ProviderSettingsSection
           providers={SETTINGS.providers}
           onProviderVisibilityChange={noop}

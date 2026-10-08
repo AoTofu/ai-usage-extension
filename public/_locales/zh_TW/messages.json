@@ -386,6 +386,18 @@
   "optionsPercentageTitle": {
     "message": "額度顯示"
   },
+  "optionsThemeTitle": {
+    "message": "主題"
+  },
+  "optionsThemeSystem": {
+    "message": "跟隨系統"
+  },
+  "optionsThemeLight": {
+    "message": "淺色"
+  },
+  "optionsThemeDark": {
+    "message": "深色"
+  },
   "optionsPercentageUsed": {
     "message": "已用"
   },

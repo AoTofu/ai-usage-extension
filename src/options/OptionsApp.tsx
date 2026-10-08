@@ -1,5 +1,6 @@
 import { RotateCcw } from 'lucide-react';
 import { useRef, useState } from 'react';
+import { useDocumentTheme } from '../shared/hooks/useTheme';
 import { msg } from '../shared/i18n';
 import { BadgeSettingsSection } from './components/BadgeSettingsSection';
 import { DisplaySettingsSection } from './components/DisplaySettingsSection';
@@ -29,6 +30,7 @@ export const OptionsApp = () => {
   const contentRef = useRef<HTMLDivElement>(null);
   const { activeId, setActiveId } = useActiveSection(contentRef, SECTION_IDS, Boolean(settings));
   const [resetArmed, setResetArmed] = useState(false);
+  useDocumentTheme(settings?.theme);
 
   if (!settings) {
     return (
@@ -88,6 +90,8 @@ export const OptionsApp = () => {
             onPopupLayoutChange={(layout) =>
               updateSettings((current) => withPopupLayout(current, layout))
             }
+            theme={settings.theme}
+            onThemeChange={(theme) => updateSettings((current) => ({ ...current, theme }))}
           />
           <LimitDisplaySettingsSection
             percentageDisplay={settings.percentageDisplay}

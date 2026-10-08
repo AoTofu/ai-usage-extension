@@ -386,6 +386,18 @@
   "optionsPercentageTitle": {
     "message": "Pagpapakita ng limitasyon"
   },
+  "optionsThemeTitle": {
+    "message": "Theme"
+  },
+  "optionsThemeSystem": {
+    "message": "Match system"
+  },
+  "optionsThemeLight": {
+    "message": "Light"
+  },
+  "optionsThemeDark": {
+    "message": "Dark"
+  },
   "optionsPercentageUsed": {
     "message": "Nagamit"
   },

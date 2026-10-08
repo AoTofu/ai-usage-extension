@@ -386,6 +386,18 @@
   "optionsPercentageTitle": {
     "message": "የገደብ ማሳያ"
   },
+  "optionsThemeTitle": {
+    "message": "Theme"
+  },
+  "optionsThemeSystem": {
+    "message": "Match system"
+  },
+  "optionsThemeLight": {
+    "message": "Light"
+  },
+  "optionsThemeDark": {
+    "message": "Dark"
+  },
   "optionsPercentageUsed": {
     "message": "ጥቅም ላይ የዋለ"
   },

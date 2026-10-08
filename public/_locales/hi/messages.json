@@ -386,6 +386,18 @@
   "optionsPercentageTitle": {
     "message": "सीमा प्रदर्शन"
   },
+  "optionsThemeTitle": {
+    "message": "Theme"
+  },
+  "optionsThemeSystem": {
+    "message": "Match system"
+  },
+  "optionsThemeLight": {
+    "message": "Light"
+  },
+  "optionsThemeDark": {
+    "message": "Dark"
+  },
   "optionsPercentageUsed": {
     "message": "उपयोग हुआ"
   },
